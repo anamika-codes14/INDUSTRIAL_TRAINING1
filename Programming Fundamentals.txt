@@ -1,0 +1,1013 @@
+# Day-1                 Programming fundamentals
+
+                                  Assignment-1
+
+                                   ## 50 questions with answers
+
+
+
+Q.1 what is a variable in C/C++ ?
+
+ANS- A variable is a named stored location used to store data in a program . Its value can be changed during the program execution.
+     SYNTAX:
+     datatype variable name ;
+ 
+     EXAMPLE:
+ 
+               int age = 15;
+               float  marks =  97.17;
+               char grade = 'A';
+ 
+      PROGRAM :
+               #include<stdio.h>
+                int main()
+                {
+                   int age = 18;
+                   printf("age = %d",age);
+                   return 0;
+                 }
+
+
+Q.2 why do we use variables in programs?
+
+ANS- we use variables because programs need to work with data and data keeps changing .variables are used to store data in the memory so that it can be accessed,modified and reused in a program.
+
+
+Q.3 what is the difference between a variable name and its value?
+
+ANS- VARIABLE NAME: The variable name is just a identifier that the programmer uses to refer to the memory location.
+     VARIABLE VALUE: The variable value is the actual data stored inside that memory location which is refered through the variable name.
+
+
+Q.4 Which of the following variable name
+    a) 2num        b)total_marks      c) for       d) my marks
+
+ ANS: The correct answer is b)total_marks because in other options:
+     (A) 2num-> variable cannot start with no.
+     (c) for -> this is a reserve keyword.
+
+     (d) my marks-> variable name cannot contain spaces.
+
+
+Q.5 Why is the Age is different from age?
+
+ANS: Because C and C ++ are the case sensitive languages.That means the compiler treats the uppercase and lower case as the different characters so the age and Age are different from each others.
+
+
+Q.6 Can a variable name contain spaces? Why?
+
+ANS:NO,variable name cannot contain spaces because the compiler reads Code by separating tokens using spaces.if we write 'int my Marks=50' then compiler sees int,my,marks and get confused because it expect only one identifier.
+
+
+Q.7 Can a variable name start with an underscore(_)?
+
+ANS:Yes variable name can be start with underscore but it is generally discouraged in normal user ,it is better to avoid it unless you have a specific naming convention or are writing low level system code.
+
+
+Q.8 What happens when the two variables have same name in the same scope?
+
+ANS:If you declare two variables with same name the compiler will throw a redeclaration error and  it will not figure out which variable you are referring.
+
+
+Q.9 write three meaningful variable names for storing student information.
+
+ANS: FOR EXAMPLE: student_name-> to store student's name.
+                  roll_no-> to store roll number.
+                  total-marks-> to store marks.
+
+
+Q.10 Which naming convention is better and why:studentMarks or sm?
+
+ANS: studentMarks is better because it clearly describes student's marks while the sm is understandable by the coder only.
+
+
+Q.11 What is the data type ?
+
+ANS :Datatype basically describes the type of the given data.It is the classification that tells a computer what kind of value a piece of data contains and whatb operations can be performed. For example:
+                                        `int` is meant for whole numbers.
+                                        'float` is for decimal numbers.
+                                        'char' is for single characters.
+
+
+
+Q.12: Which data type is used to store whole numbers?
+
+ANS:`int` (integer) data type is used to store whole numbers.
+    -> It can hold positive numbers, negative numbers, and zero, but not fractional value.
+    -> You can use `long` or `long long`, and for smaller ranges, you can use `short`. But `int` is the standard go-to type for whole numbers in most programs.
+
+
+Q.13: Which data type is used to store decimal values?
+
+ANS:to store decimal values we use float datatype but for heavy data we uses double because it uses more memory i.e 8 bytes and can represent no. with higher accuracy.
+
+
+Q.14: What is the difference between float and double?
+
+ANS:The main difference lies in precision and memory usage:
+        *float: Occupies 4 bytes of memory. It provides about 6-7 decimal digits of precision. It is suitable when memory is limited and you do not need extreme      accuracy.
+        *double: Occupies 8 bytes of memory. It provides about 15-16 decimal digits of precision. It is the default choice for scientific calculations, financial computations, and anywhere accuracy matters.
+
+For example, if you store 3.1415926535 in a `float`, it might only keep 3.141593, whereas a `double` would retain much more of the original value. In most modern systems, the speed difference is negligible, so `double` is generally recommended unless you specifically need to save memory.
+
+
+Q15: Which data type stores a single character?
+
+ANS:The `char` data type stores a single character. It occupies 1 byte of memory and can hold any single character from the ASCII set, such as letters, digits, punctuation marks, or special symbols. You write character literals inside single quotes. For example:
+FOR EXAMPLE:
+char grade = 'A';
+char symbol = '$';
+char digit = '7';
+
+
+Q.16: Which data type stores True/False values?
+
+ANS: The `bool` (boolean) data type stores True/False values. It can only hold `true` or `false`. In memory, `true` is typically stored as 1 and `false` as 0, but you work with the keywords. Booleans are essential for decision-making in programs — they are used in conditions, loops, and flags. For example:
+FOR EXAMPLE:
+            ->bool is Passed = true;
+            ->bool is Raining = false;
+
+
+Q.17 What data type is suitable for storing a person's name?
+
+ANS:For storiing a person name string is used.
+    ->A person's name is a sequence of characters (a string), so you should use the `string` data type in C++. In C++, you can use `std::string` after including the     `<string>` header. For example:
+                                #include<string>
+                                 using namespace std;
+
+                                 string name = "Rahul Sharma";
+
+
+Q.18: Predict the output: int age=18; cout<<age;
+
+ANS:
+The output will be:
+                     18
+
+Explanation: The variable `age` is initialized with the value 18. When we use `cout << age;`, the insertion operator sends the value stored in `age` to the standard output stream (the console). It does not print the word "age" — it prints the actual value, which is 18. There is no newline after it, so if another output follows, it would appear on the same line.
+
+
+Q.19: Identify the data type: 25, 3.14, 'A', true.
+
+ANS: the datatypes are:
+
+          #25 --> `int` : A whole number without a decimal point.
+          # 3.14--> `double` : A decimal number. By default, decimal literals in C++ are treated as `double`. If you want `float`, you write `3.14f`.
+          #'A' --> `char` : A single character enclosed in single quotes.
+          #true --> `bool` : A boolean literal representing the true condition.
+
+
+
+Q.20: What happens if you store a decimal number in an int variable?
+
+ANS: If you try to store a decimal number in an `int` variable, the fractional part gets cut off, not rounded. Only the integer part is remai unchanged.                   For example:
+
+                int x = 9.7;
+                cout << x;
+*output:9
+
+
+ The value 9.7 becomes 9, not 10. This is called implicit type conversion or narrowing conversion. To avoid accidental data loss, it is better to use the appropriate data type (`float` or `double`) or explicitly cast the value if you truly intend to truncate it.
+
+
+Q. 21: What is the purpose of cin?
+
+ANS: It is used to input the data in C++ language and is an object of the `istream` class. Its purpose is to read input from the standard input device, which is usually the keyboard. Without `cin`, every value would have to be hardcoded, and the program would not be able to respond to different inputs. For example, `cin >> age;` pauses the program, waits for the user to type a number and press Enter, and then stores that number in the variable `age`.
+
+
+
+Q.22: What is the purpose of cout?
+
+ANS: `cout` stands for "character output" and is an object of the `ostream` class. Its purpose is to send data to the standard output device, which is usually the monitor or console. It is used to display text, variable values, calculation results, and messages to the user. `cout` makes it possible to communicate with the user by showing what is happening inside the program.
+FOR EXAMPLE:
+              prints the text "Hello" on the screen
+              cout<<"Hello";
+              output: Hello
+
+
+Q.23: Which symbol is used with cin?
+
+ANS:
+The **extraction operator** `>>` (two greater-than signs) is used with `cin`. It is called the extraction operator because it extracts data from the input stream and stores it into the variable on its right. The direction of the arrows points from the input stream toward the variable, indicating the flow of data.
+
+
+
+Q.24: Which symbol is used with cout?
+
+ANS: The **insertion operator** `<<` (two less-than signs) is used with `cout`. It is called the insertion operator because it inserts data into the output stream. The direction of the arrows points from the data toward the output stream, indicating that the data is being sent to the console.
+
+
+
+Q.25: Explain: cin >> age;
+
+ANS:This statement reads a value from the keyboard and stores it in the variable `age`. Here is the breakdown:
+- `cin` is the standard input stream object.
+- `>>` is the extraction operator.
+- `age` is the variable where the extracted value will be stored.
+
+When this line executes, the program pauses and waits for the user to type something and press Enter. The input is then converted to the data type of `age` (if compatible) and stored in that variable.
+ 
+
+Q.26: Explain: cout << age;
+
+ANS: This statement prints the value stored in the variable `age` to the screen. Here is the breakdown:
+- `cout` is the standard output stream object.
+- `<<` is the insertion operator.
+- `age` is the variable whose value is being inserted into the output.
+
+The output will be whatever number or character is currently stored in `age`. It will not print the word "age". If `age` contains 25, the screen will show `25
+
+
+Q.27: What is the purpose of endl?
+
+ANS: `endl` stands for "end line" and is a manipulator used with `cout`. Its purpose is to insert a newline character into the output stream and flush the buffer. When you use `endl`, the cursor moves to the beginning of the next line, so the next output appears on a new line.
+FOR EXAMPLE:
+
+               cout << "Hello" << endl;
+               cout << "World" << endl;
+
+Output:
+
+            Hello
+            World
+
+
+*** There is also `\\n`, which inserts a newline but does not force a buffer flush. `endl` is slightly slower because of the flush, but for beginner programs, the difference is unnoticeable.
+
+
+
+Q.28: Write a statement to input a student's marks.
+
+ANS: To input the marks
+     #include<iostream.h>
+     #include<conio.h>
+       int marks;
+       cin >> marks;
+
+***The first line declares an integer variable `marks`. The second line uses `cin` with the extraction operator to read an integer value from the keyboard and store it in `marks`. The prompt message helps the user understand what to type.
+
+
+
+Q.29: Write a statement to display 'Welcome to C++'.
+
+ANS: 1.write the header files.
+     2.input the welcome to C++.
+     3.Then see the output.
+
+FOR EXAMPLE :
+
+#include<iostream.h>
+#include<conio.h>
+
+cout<<"welcome to c++";
+
+
+***The text inside the double quotes is a string literal. `cout` sends it to the console. The `endl` (or `\\n`) ensures the next output starts on a new line, which is usually good practice.
+
+
+
+Q.30: Predict the output: cout << 'Programming';
+
+ANS: This code will actually cause a **compilation error** or at least a serious warning. The reason is that `'Programming'` is written with single quotes, but it contains multiple characters. In C++, single quotes are for single character literals (`char`), and double quotes are for string literals. A multi-character constant like `'Programming'` is non-standard and its behavior is undefined. The compiler might try to cram it into an integer (since `char` is promoted to `int`), but it will definitely not print the word "Programming". The correct way is:
+
+```cpp
+
+cout << "Programming";  // Using double quotes
+
+
+
+
+
+Q.31: What is an operator?**
+
+
+
+**ANS**: An operator is a special symbol or keyword that tells the compiler to perform a specific mathematical, logical, or relational operation on one or more operands (values or variables). Operators are the building blocks of expressions. For example, in `a + b`, `+` is the addition operator, and `a` and `b` are the operands. C++ has many types of operators: arithmetic (`+`, `-`, `\*`, `/`, `%`), relational (`>`, `<`, `==`), logical (`\&\&`, `||`, `!`), assignment (`=`), bitwise, and more. 
+
+
+
+
+
+Q.32: Which operator is used for addition?**
+
+
+
+The \*\*plus sign\*\* (`+`) is the arithmetic operator used for addition. It adds two numbers together and returns the sum. For example:
+
+
+
+```cpp
+
+int sum = 10 + 5;  // sum becomes 15
+
+int total = a + b; // adds values of a and b
+
+```
+
+***It works with integers, floating-point numbers, and even character types (where it adds their ASCII values). It is one of the most fundamental operators in any programming language.
+
+
+
+Q.33: What is the result of 10 % 3?
+
+ANS: % is a remainder operator which gives remainder as an output.
+       #The result is **1**.
+
+***The `%` symbol is the **modulo operator** (or modulus operator). It returns the remainder after dividing the left operand by the right operand. When you divide 10 by 3, you get 3 as the quotient and 1 as the remainder because 3 × 3 = 9, and 10 − 9 = 1. The modulo operator is very useful for checking divisibility, extracting digits
+
+
+
+Q.34: What is the result of 8 % 2?
+
+ANS: It is a remainder operator.
+     The result is **0**.
+
+***Since 8 is perfectly divisible by 2 (2 × 4 = 8), there is no remainder left. The modulo operator returns 0 whenever the first number is exactly divisible by the second number. This is why `num % 2 == 0` is a common way to check if a number is even.
+
+
+Q.35: Which operator checks equality?
+
+ANS: The **equality operator** `==` (two equal signs) checks whether two values are equal. It compares the operands and returns `true` if they are the same, and `false` if they are different. For example:
+
+```cpp
+
+if (a == b) {
+  cout << "a and b are equal";
+
+}
+
+
+
+
+
+It is very important not to confuse `==` with `=`. The single `=` is assignment, not comparison. Using `=` in a condition is a common bug that changes the value instead of comparing it.
+
+
+Q.36: What is the difference between = and == ?**
+
+
+| Operator | Name | Purpose | Example |
+
+|----------|------|---------|---------|
+
+| `=` | Assignment Operator | Assigns the value on the right to the variable on the left. | `x = 5;` stores 5 in x. |
+
+| `==` | Equality Operator | Compares two values and returns true if they are equal, false otherwise. | `if (x == 5)` checks if x is 5. |
+
+
+
+The assignment operator `=` changes the value of a variable. The equality operator `==` does not change anything; it only evaluates a condition. Mixing them up is one of the most common mistakes beginners make. For example, `if (x = 5)` will always be true because it assigns 5 to x (and the expression evaluates to 5, which is non-zero), whereas `if (x == 5)` only checks if x is already 5.
+
+
+
+Q.37: What is the result of 5 > 3?**
+
+ANS:The result is true (which is represented as \*\*1\*\* in C++).
+
+
+
+`>` is a relational operator that checks if the left operand is greater than the right operand. Since 5 is indeed greater than 3, the expression evaluates to the boolean value `true`. If you print this in C++, it will display `1` because `bool` values are printed as 1 for true and 0 for false. 
+
+
+
+Q.38: What does \&\& represent?**
+
+ANS: `\&\&` is the *logical AND operator*. It returns `true` only if both of its operands are true. If either operand is false, the entire expression becomes false. It is used to combine multiple conditions. 
+
+FOR EXAMPLE:
+
+
+
+if (age >= 18 \&\& age <= 60) {
+
+&nbsp;   cout << "You are eligible to work.";
+
+}
+
+*Here, both conditions must be satisfied: the person must be at least 18 AND at most 60. `\&\&` also uses short-circuit evaluation: 
+
+
+
+Q.39: What does || represent?**
+
+ANS:  `||` is the \*\*logical OR operator\*\*. It returns `true` if at least one of its operands is true. It only returns `false` when both operands are false. It is used when you want to check if any one of multiple conditions is satisfied. 
+
+FOR EXAMPLE:
+
+
+
+if (day == "Saturday" || day == "Sunday") {
+
+&nbsp;   cout << "It is a weekend!";
+
+}
+
+*Here, if the day is either Saturday OR Sunday, the message prints. Like `\&\&`, `||` also uses short-circuit evaluation: if the first condition is true, the second one is skipped because the result is already true.
+
+
+Q.40: What does ! represent?**
+
+ANS*: `!` is the( \*\*logical NOT operator\*\*). It is a unary operator (works on a single operand) that inverts the boolean value. If the operand is true, `!` makes it false, and vice versa. For example:
+
+
+
+                                 bool isRaining = false;
+
+                                 if (!isRaining) {
+
+                                cout << "You can go outside without an umbrella.";
+
+                            }
+
+
+`!isRaining` is true because `isRaining` is false. It is commonly used to check for negation or to ensure something is NOT the case, like `if (!file.open())` to check if a file failed to open.
+
+
+Q.41: Write a program to print 'Hello World'.**
+ANS-->PROBLEM STATEMENT:we have to write a program to print 'Hello World'
+
+.
+
+     -->ALGORITHM:
+
+
+              1.Start
+              2.input the "Hello World"
+              3.display the message "Hello World"             
+              4.stop
+
+
+
+ -->POROGRAM CODE:
+
+                    #include <iostream>
+
+                    using namespace std;
+
+
+
+                     int main() {
+
+                     cout << "Hello World" << endl;
+
+                     return 0;
+
+                     }
+
+
+
+   -->Output: 
+
+               ````
+
+               Hello World
+
+               ````
+
+
+
+  -->Explanation: We include the `<iostream>` header for input/output operations. In `main()`, we use `cout` to print the string "Hello World" and `endl` to move to a new line. `return 0;` indicates the program ended successfully.
+
+
+
+Q.42: Write a program to input two numbers and display their sum.**
+
+ANS-->PROBLEMS TATEMENT:we have to write a program to create sum of two no.
+
+
+
+    -->ALGORITHM:
+
+                  1.start
+
+                  2.input two numbers A and B
+
+                  3.apply formula
+
+                  4.Display sum
+
+                  5.Stop
+
+
+
+    -->PROGRAMCODE:
+
+
+
+                    #include <iostream>
+
+                    using namespace std;
+
+
+
+                    int main() {
+
+                    int A, B, sum;
+
+
+
+                    cout << "Enter first number: ";
+
+                    cin >> A;
+
+
+
+                     cout << "Enter second number: ";
+
+                     cin >> B;
+
+
+
+                     sum = A + B;
+
+
+
+                     cout << "The sum is: " << sum << endl;
+
+
+
+                    return 0;
+
+           }
+
+
+
+
+
+    -->Sample*Input:
+
+
+
+                     Enter first number: 15
+
+                     Enter second number: 25
+
+
+
+
+
+     -->Sample*Output:
+
+                     The sum is: 40
+
+
+
+
+
+    -->Explanation: We declare three integer variables. We prompt the user and read two numbers using `cin`. We calculate the sum using the `+` operator and store it in `sum`. Finally, we display the result using `cout`.
+
+
+
+
+
+
+
+Q.43: Write a program to calculate the area of a rectangle.
+
+ANS:-->PROBLEM STATEMENT: Calculate the area of rectangle.
+
+
+
+    -->ALGORITHM: 
+
+                  1.Start
+
+                  2.Input length L and breadth B
+
+                  3.Apply formula (L*B)
+
+                  4.Display area
+
+                  5.Stop
+
+
+
+     -->PROGRAM CODE:
+
+
+
+                   #include <iostream>
+
+                    using namespace std;
+
+
+
+                    int main() {
+
+                    float L, B, Area;
+
+
+
+                    cout << "Enter length of rectangle: ";
+
+                    cin >> L;
+
+
+
+                    cout << "Enter width of rectangle: ";
+
+                    cin >> B;
+
+
+
+                   Area = L \* B;
+
+
+
+                    cout << "Area of rectangle = " << Area << endl;
+
+
+
+                    return 0;
+
+                 }
+
+
+
+
+
+   --> Sample Input:
+
+
+
+                     Enter length of rectangle: 12.5
+
+                     Enter width of rectangle: 8.0
+
+
+
+
+
+    --> Sample Output:
+
+
+
+                      Area of rectangle = 100
+
+
+
+
+
+-->.Explanation: We use `float` because length and width can be decimal values. We multiply length by width to get the area and print it. The formula is straightforward: Area = Length × Width.
+
+
+
+
+
+
+
+Q.44 Write formula of simple interest.
+
+ANS: 
+
+        The formula for Simple Interest is:
+
+
+
+Simple Interest = (Principal × Rate × Time) 
+
+
+
+        Or in short:
+
+
+
+SI = (P × R × T) / 100
+
+
+
+Where:
+
+P = Principal amount (the initial sum of money)
+
+R = Rate of interest per annum (in percentage)
+
+T = Time period (in years)
+
+SI = Simple Interest earned
+
+
+
+This formula assumes the interest is calculated uniformly over the entire time period without compounding.
+
+
+
+Q.45: Write a program to calculate Simple Interest
+
+
+
+ANS*: -->PROBLEM STATEMENT: Calculate simple interest
+
+
+
+
+
+     -->ALGORITHM:
+
+                   1.Start
+
+                   2.Declare the variables
+
+                   3.Input principle p,rate r,time t
+
+                   4.Apply formula :(p\*r\*t)
+
+                   5.Display
+
+                   6.Stop 
+
+
+
+    -->PROGRAM CODE:
+
+                   #include <iostream>
+
+                    using namespace std;
+
+
+
+                    int main() {
+
+                     float p, r, t, SI;
+
+
+
+                     cout << "Enter Principal amount: ";
+
+                     cin >> p;
+
+
+
+                    cout << "Enter Rate of interest (per year): ";
+
+                     cin >> r;
+
+
+
+                     cout << "Enter Time (in years): ";
+
+                     cin >> t;
+
+
+
+                    SI = (principal * rate * time) / 100;
+
+
+
+                     cout << "Simple Interest = " << simpleInterest << endl;
+
+
+
+                     return 0;
+
+                        }
+
+
+
+   -->Sample Input:
+
+
+
+                  Enter Principal amount: 10000
+
+                  Enter Rate of interest (per year): 5
+
+                  Enter Time (in years): 3
+
+
+
+
+
+    -->Sample Output:
+
+
+
+                    Simple Interest = 1500
+
+
+
+
+
+    -->Explanation: We declare float variables because monetary values and interest rates can have decimal parts. We apply the formula SI = (P × R × T) / 100 and display the result. Using float ensures we do not lose precision if the user enters decimal values.
+
+
+
+
+
+
+
+Q.46: Why is a temporary variable used while swapping two numbers?
+
+ANS:
+
+A temporary variable is used because if you directly overwrite one variable with another, you lose the original value. For example, if you have `a = 10` and `b = 20`, and you write `a = b;`, then `a` becomes 20, but the original value of `a` (which was 10) is gone forever. Now when you try `b = a;`, `b` gets 20 again, so both variables end up as 20. The swap fails.
+
+A temporary variable acts like a backup. You store the value of `a` in `temp`, then copy `b` into `a`, and finally copy `temp` (the original `a`) into `b`. This way, both values are preserved and exchanged correctly. It is the simplest and most reliable method for swapping.
+
+
+
+Q.47 Swap the a=10 & b=20
+
+
+
+ANS:-->PROBLEM*STATEMENT: Swapping of two numbers.
+
+
+
+  -->STEPS:
+
+
+
+Here is the step-by-step swapping using a temporary variable:
+
+
+
+Step 1: Store `a` in `temp`
+
+`temp = a` → `temp` becomes 10
+
+
+
+Step 2: Copy `b` into `a`
+
+- `a = b` → `a` becomes 20
+
+
+
+Step 3: Copy `temp` into `b`
+
+ `b = temp` → `b` becomes 10
+
+
+
+*Final values:`a = 20`, `b = 10`
+
+
+
+Here is the complete program:
+
+
+
+ **-->PROGRAM** **CODE**:
+
+
+
+#include <iostream>
+
+using namespace std;
+
+
+
+int main() {
+
+   int a = 10, b = 20, temp;
+
+
+
+   cout << "Before swapping: a = " << a << ", b = " << b << endl;
+
+
+
+  temp = a;
+
+   a = b;
+
+   b = temp;
+
+
+
+  cout << "After swapping: a = " << a << ", b = " << b << endl;
+
+
+
+   return 0;
+
+}
+
+
+
+
+
+**-->Output**:
+
+
+
+        Before swapping: a = 10, b = 20
+       After swapping: a = 20, b = 10
+
+
+
+
+
+
+
+Q.48: What formula is used to convert Celsius into Fahrenheit?
+
+
+
+**ANS**:  **-->FORMULA**:
+             The formula to convert Celsius to Fahrenheit is:
+
+
+
+                   **F = (C × 9/5) + 32**
+
+
+
+Or equivalently:
+
+
+
+                    **F = (C × 1.8) + 32**
+
+
+
+Where:
+
+\*C= Temperature in degrees Celsius
+
+\*F = Temperature in degrees Fahrenheit
+
+
+
+    **-->** **FOR** **EXAMPLE**: if C = 0, then F = (0 × 9/5) + 32 = 32°F. If C = 100, then F = (100 × 9/5) + 32 = 180 + 32 = 212°F.
+
+
+
+
+
+
+
+Q.49: What is the Fahrenheit value of 0°C?
+
+
+
+**ANS**:
+
+
+
+          **Using the formula \*\*F = (C × 9/5) + 32\*\*:**
+
+
+
+           F = (0 × 9/5) + 32 = 0 + 32 = \*\*32°F\*\*
+
+
+
+So, 0 degrees Celsius is equal to 32 degrees Fahrenheit. This is the freezing point of water on the Fahrenheit scale. It is one of the most commonly known reference points for temperature conversion.
+
+
+
+
+
+
+
+Q.50: Why can integer division give incorrect results in the Celsius-to-Fahrenheit program?
+
+
+
+**ANS**:
+
+
+
+Integer division can give incorrect results because in C/C++, if both operands of the division operator `/` are integers, the result is also an integer, and the decimal part is truncated (cut off). 
+
+
+
+**--->FOR** **EXAMPLE**: in the expression `9/5`, both 9 and 5 are integers, so the result is `1`, not `1.8`. If you then write:
+
+
+
+
+
+int f = (c * 9 / 5) + 32;
+
+
+
+
+
+For c = 37, you would get:
+
+`37 \* 9 = 333`
+
+`333 / 5 = 66` (not 66.6)
+
+ `66 + 32 = 98` (instead of the correct 98.6)
+
+
+
+To fix this, you should make at least one operand a floating-point number, like `9.0/5` or `9/5.0`, or use `float`/`double` variables. This forces the compiler to perform floating-point division and preserve the decimal accuracy.
+
+
+
+\*\*Correct approach:\*\*
+
+```cpp
+
+float f = (c \* 9.0 / 5.0) + 32;
+
+```
+
+
+_______________________________________________________________________________________________________________________________________________________________________
+*End of Assignment 1*
