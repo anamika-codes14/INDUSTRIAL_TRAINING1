@@ -1,0 +1,4911 @@
+# DAY-3                       ASSIGNMENT-3
+                            ===============
+*Date-17 June,2026
+
+
+
+## 10 PROBLEMS WITH SOLUTION :
+
+
+
+====================================================================================================================================
+
+
+
+
+# PROBLEM-1 :
+=============
+
+
+
+
+#include <stdio.h>
+
+
+#include <math.h>
+
+int calculate(int a, int b);
+
+
+int main()
+{
+    int x = 10
+
+    int y = 20;
+
+    printf("Program Started\n");
+
+
+    if(x = 10)
+
+    {
+        printf("X is 10\n");
+
+    }
+
+    int marks = "Ninety";
+
+
+    printf("%d\n", z);
+
+    100 = x;
+
+    int arr[5];
+
+
+
+    arr[10] = 50;
+
+    float *ptr = &x;
+
+    printf("%f\n", x);
+
+    int a = 10;
+
+    int b = 0;
+
+    printf("%d\n", a/b);
+
+    char ch = 'AB';
+
+    if(x > y)
+        printf("X is greater");
+
+    else
+        printf("X is greater");
+
+    sqrt(25);
+
+    show();
+
+    while(x < 15);
+    {
+        x++;
+    }
+
+    continue;
+
+    break;
+
+    int result = calculate(10);
+
+    printf("%d\n", result);
+
+
+    printf("Program Ended\n");
+
+    return 0;
+}
+
+int calculate(int a, int b)
+
+{
+    return a + b;
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+#SOLUTION : 
+
+
+
+###LINE-WISE ERRORS AND CORRECTIONS
+
+
+
+
+------>>> Line 8
+
+
+
+* Error Type  : Syntax Error
+
+* Code        : int x = 10
+
+* Correction  : int x = 10;
+
+
+------>>> Line 13
+
+
+
+*Error Type  : Logical Error
+
+*Code        : if(x = 10)
+
+*Correction  : if(x == 10)
+
+
+------>>> Line 18
+
+
+
+*Error Type  : Type Mismatch Error
+
+*Code        : int marks = "Ninety";
+
+*Correction  : char marks[] = "Ninety";
+
+
+------>>> Line 20
+
+
+
+*Error Type  : Compile-Time Error (Undeclared Variable)
+
+*Code        : printf("%d\n", z);
+
+*Correction  : Declare z before use.
+             
+                Example:
+                         int z;
+
+                         printf("%d\n", z);
+
+------>>> Line 22
+
+
+
+*Error Type  : Compile-Time Error (Invalid Assignment)
+
+*Code        : 100 = x;
+
+*Correction  : x = 100;
+
+
+----->>> Line 26
+
+
+
+*Error Type  : Runtime Error / Array Index Out of Bounds
+
+*Code        : arr[10] = 50;
+
+*Correction  : Use a valid index.
+
+              Example:
+
+              arr[4] = 50;
+
+----->>>Line 28
+
+
+
+*Error Type  : Type Mismatch Error
+
+*Code        : float *ptr = &x;
+
+*Correction  : int *ptr = &x;
+
+
+------>>> Line 30
+
+
+
+*Error Type  : Format Specifier Error
+
+*Code        : printf("%f\n", x);
+
+*Correction  : printf("%d\n", x);
+
+
+----->>>Line 35
+
+
+
+*Error Type  : Runtime Error (Division by Zero)
+
+*Code        : printf("%d\n", a/b);
+
+*Correction  : Ensure b is not zero before division.
+              Example:
+              if(b != 0)
+                  printf("%d\n", a/b);
+
+------>>> Line 37
+
+
+
+*Error Type  : Multi-character Constant Warning
+
+*Code        : char ch = 'AB';
+
+*Correction  : char ch = 'A';
+
+
+------>>> Line 42
+
+
+
+*Error Type  : Logical Error
+
+*Code        : printf("X is greater");
+
+*Correction  : printf("Y is greater");
+
+
+------>>>> Line 45
+
+
+
+*Error Type  : Warning (Return Value Ignored)
+
+*Code        : sqrt(25);
+
+*Correction  : printf("%f\n", sqrt(25));
+
+
+------>>> Line 47
+
+
+
+*Error Type  : Compile-Time Error (Function Not Defined)
+
+*Code        : show();
+
+*Correction  : Define show() function or remove the call.
+
+
+------>>>> Line 49
+
+*Error Type  : Logical Error (Infinite/Empty Loop)
+
+*Code        : while(x < 15);
+
+*Correction  : while(x < 15)
+
+
+------>>>> Line 55
+
+
+
+*Error Type  : Compile-Time Error (continue outside loop)
+
+*Code        : continue;
+
+*Correction  : Use continue inside a loop.
+
+
+------>>> Line 57
+
+*Error Type  : Compile-Time Error (break outside loop/switch)
+
+*Code        : break;
+
+*Correction  : Use break inside a loop or switch.
+
+
+------>>> Line 59
+
+
+
+*Error Type  : Compile-Time Error (Wrong Number of Arguments)
+
+*Code        : int result = calculate(10);
+
+*Correction  : int result = calculate(10, 20);
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+### CORRECT PROGRAM
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int calculate(int a, int b);
+
+void show()
+{
+    printf("Show function called\n");
+}
+
+int main()
+{
+    int x = 10;
+    int y = 20;
+
+    printf("Program Started\n");
+
+    if(x == 10)
+    {
+        printf("X is 10\n");
+    }
+
+    char marks[] = "Ninety";
+
+    int z = 0;
+    printf("%d\n", z);
+
+    x = 100;
+
+    int arr[5];
+    arr[4] = 50;
+
+    int *ptr = &x;
+
+    printf("%d\n", x);
+
+    int a = 10;
+    int b = 2;
+
+    if(b != 0)
+    {
+        printf("%d\n", a / b);
+    }
+
+    char ch = 'A';
+
+    if(x > y)
+        printf("X is greater\n");
+    else
+        printf("Y is greater\n");
+
+    printf("%f\n", sqrt(25));
+
+    show();
+
+    while(x < 15)
+    {
+        x++;
+    }
+
+    for(int i = 0; i < 5; i++)
+    {
+        if(i == 2)
+            continue;
+
+        if(i == 4)
+            break;
+    }
+
+    int result = calculate(10, 20);
+
+    printf("%d\n", result);
+
+    printf("Program Ended\n");
+
+    return 0;
+}
+
+int calculate(int a, int b)
+{
+    return a + b;
+}
+
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+### PROBLEM-2 : 
+=================
+
+
+#include <stdio.h>
+
+int add(int a, int b);
+
+int main()
+{
+    int choice;
+    int num1 = 10;
+    int num2 = 20
+    int result;
+
+    printf("=== MENU ===\n");
+
+    printf("1. Add\n");
+
+    printf("2. Subtract\n");
+
+    printf("3. Multiply\n");
+
+    printf("4. Divide\n");
+
+    printf("Enter choice: ");
+
+    scanf("%d", &choice);
+
+    if(choice == 1
+    {
+        result = num1 + num2;
+        printf("Result = %d\n", result);
+    }
+
+    else if(choice == 2)
+    {
+        result = num1 - num2;
+        printf("Result = %d\n", result);
+    }
+
+    else if(choice == 3))
+    {
+        result = num1 * num2;
+        printf("Result = %d\n", result);
+    }
+
+    else if(choice == 4)
+    {
+        result = num1 / num2;
+        printf("Result = %d\n", result);
+    }
+
+    else
+    {
+        printf("Invalid Choice\n");
+    }
+
+    for(int i=0; i<5; i++
+    {
+        printf("%d ", i);
+    }
+
+    printf("\n");
+
+    while(choice > 0
+    {
+        choice--;
+    }
+
+    do
+    {
+        printf("Processing...\n");
+    }
+    while(choice > 5)
+
+    switch(choice)
+    {
+        case 1:
+            printf("One\n");
+            break;
+
+        case 2
+            printf("Two\n");
+            break;
+
+        default:
+            printf("Other\n");
+    }
+
+    int marks = 80;
+
+    if(marks >= 90)
+    {
+        printf("Grade A\n");
+    }
+    else if(marks >= 80)
+    {
+        printf("Grade B\n");
+    }
+    else if(marks >= 70)
+    {
+        printf("Grade C\n");
+    }
+    else
+    {
+        printf("Grade D\n");
+    }
+
+    char grade = 'A;
+
+    printf("Grade = %c\n", grade);
+
+    int arr[5;
+
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+
+    printf("%d\n", arr[0]);
+
+    if(arr[0] > 5)
+    {
+        printf("Greater\n");
+    }
+
+    {
+        printf("Block Start\n");
+
+        if(arr[1] > 10)
+        {
+            printf("Condition True\n");
+        }
+
+    printf("Still Running\n");
+
+    for(int j=0; j<3; j++)
+    {
+        printf("%d\n", j);
+    }
+
+    printf("End of Program\n")
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+### SOLUTION: 
+
+
+
+
+
+
+
+******* LINE WISE ERROR AND CORRECTION :
+
+___________________________________________________________________________________________________________________________________
+| Line / Code                               | Error                     | Correction                            | Type of Error    |        
+| ----------------------------------------- | ------------------------- | ------------------------------------- | -----------------|
+| `int num2 = 20`                           | Missing `;`               | `int num2 = 20;`                      | Syntax error     |
+|__________________________________________________________________________________________________________________________________|          
+| `if(choice == 1`                          | Missing `)`               | `if(choice == 1)`                     | Syntax error     |       
+|________________________________________________________________________________________________________________________________  | 
+| `else if(choice == 3))`                   | Extra `)`                 | `else if(choice == 3)`                | Syntax error     |        
+|_________________________________________________________________________________________________________________________________ |
+| `for(int i=0; i<5; i++`                   | Missing `)`               | `for(int i=0; i<5; i++)`              | Syntax error     |        |_________________________________________________________________________________________________________________________________ |
+| `while(choice > 0`                        | Missing `)`               | `while(choice > 0)`                   | Syntax error     |        |_________________________________________________________________________________________________________________________________ | 
+| `do ... while(choice > 5)`                | Missing `;` after while   | `while(choice > 5);`                  | Syntax error     |        |_________________________________________________________________________________________________________________________________ |
+| `case 2`                                  | Missing `:`               | `case 2:`                             | Syntax error     |        |_________________________________________________________________________________________________________________________________ |
+| `printf("End of Program\n")`              | Missing `;`               | `printf("End of Program\n");`         | Syntax error     |        |_________________________________________________________________________________________________________________________________ |
+| `char grade = 'A;`                        | Missing `'`               | `char grade = 'A';`                   | Syntax error     |        |__________________________________________________________________________________________________________________________________|
+| `int arr[5;`                              | Missing `]`               | `int arr[5];`                         | Syntax error     |        |__________________________________________________________________________________________________________________________________|
+| `switch(choice)` after modifying `choice` | Logic becomes meaningless | Avoid changing `choice` before switch | Logical error    |        
+|__________________________________________________________________________________________________________________________________|
+| `choice--` before switch                  | Alters program flow       | Remove or relocate logic              | Logical error    |      |__________________________________________________________________________________________________________________________________|
+|                                                                                                                                   |
+| `arr[5] declared but not fully used`      | Partial initialization    | Optional improvement                  | Logical /semantic |
+|___________________________________________________________________________________________________________________________________|
+| Unused function `add()`                   | Function not used         | Call it in menu if needed             | Logical / semantic| 
+|___________________________________________________________________________________________________________________________________|__
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+******* CORRECT PROGRAM :
+
+
+  
+#include <stdio.h>
+
+int add(int a, int b);
+
+int main()
+{
+    int choice;
+    int num1 = 10;
+    int num2 = 20;
+    int result;
+
+    printf("=== MENU ===\n");
+
+    printf("1. Add\n");
+
+    printf("2. Subtract\n");
+
+    printf("3. Multiply\n");
+
+    printf("4. Divide\n");
+
+    printf("Enter choice: ");
+
+    scanf("%d", &choice);
+
+    if (choice == 1)
+    {
+        result = num1 + num2;
+        printf("Result = %d\n", result);
+    }
+    else if (choice == 2)
+    {
+        result = num1 - num2;
+        printf("Result = %d\n", result);
+    }
+    else if (choice == 3)
+    {
+        result = num1 * num2;
+        printf("Result = %d\n", result);
+    }
+    else if (choice == 4)
+    {
+        result = num1 / num2;
+        printf("Result = %d\n", result);
+    }
+    else
+    {
+        printf("Invalid Choice\n");
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    while (choice > 0)
+    {
+        choice--;
+    }
+
+    do
+    {
+        printf("Processing...\n");
+    }
+    while (choice > 5);
+
+    switch (choice)
+    {
+        case 1:
+            printf("One\n");
+            break;
+
+        case 2:
+            printf("Two\n");
+            break;
+
+        default:
+            printf("Other\n");
+    }
+
+    int marks = 80;
+
+    if (marks >= 90)
+        printf("Grade A\n");
+    else if (marks >= 80)
+        printf("Grade B\n");
+    else if (marks >= 70)
+        printf("Grade C\n");
+    else
+        printf("Grade D\n");
+
+    char grade = 'A';
+    printf("Grade = %c\n", grade);
+
+    int arr[5];
+
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+
+    printf("%d\n", arr[0]);
+
+    if (arr[0] > 5)
+    {
+        printf("Greater\n");
+    }
+
+    {
+        printf("Block Start\n");
+
+        if (arr[1] > 10)
+        {
+            printf("Condition True\n");
+        }
+
+        printf("Still Running\n");
+
+        for (int j = 0; j < 3; j++)
+        {
+            printf("%d\n", j);
+        }
+
+        printf("End of Program\n");
+    }
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+### PROBLEM-3:
+=============
+
+
+
+
+#include <stdio.h>
+
+int add(int a, int b);
+float average(int a, int b, int c);
+
+int main()
+{
+    int age = "Twenty";
+
+    float salary = 50000.50;
+
+    int marks = 85;
+
+    char grade = "A";
+
+    printf("%d\n", salary);
+
+    printf("%f\n", marks);
+
+    int total;
+
+    total = marks + score;
+
+    int x = 10;
+    int x = 20;
+
+    100 = x;
+
+    int num = 25;
+
+    printf("%s\n", num);
+
+    float pi = 3.14;
+
+    printf("%d\n", pi);
+
+    int arr[5];
+
+    arr[2.5] = 100;
+
+    char ch = 65.5;
+
+    int result;
+
+    result = add(10);
+
+    printf("%d\n", result);
+
+    float avg;
+
+    avg = average(10,20);
+
+    printf("%f\n", avg);
+
+    int temperature = "35";
+
+    int amount = 1000;
+
+    float discount = "10.5";
+
+    amount = amount - discount;
+
+    char name[20];
+
+    name = "Robil";
+
+    printf("%s\n", name);
+
+    int count;
+
+    count = totalMarks + 10;
+
+    int number = 50;
+
+    printf("%c\n", number);
+
+    float rate = 7.5;
+
+    printf("%d\n", rate);
+
+    int a = 10;
+    int b = 20;
+
+    int sum;
+
+    sum = add(a,b,c);
+
+    printf("%d\n", sum);
+
+    float radius = 5.5;
+
+    int area;
+
+    area = 3.14 * radius * radius;
+
+    printf("%d\n", area);
+
+    int studentMarks = 90;
+
+    if(studentMarks = 100)
+    {
+        printf("Perfect Score\n");
+    }
+
+    int size = "Large";
+
+    printf("%d\n", size);
+
+    float percentage = 89.75;
+
+    printf("%d\n", percentage);
+
+    int arr2[10];
+
+    arr2["five"] = 100;
+
+    int choice = 2;
+
+    switch(choice)
+    {
+        case 1:
+            printf("One\n");
+            break;
+
+        case "2":
+            printf("Two\n");
+            break;
+    }
+
+    int finalResult;
+
+    finalResult = multiply(10,20);
+
+    printf("%d\n", finalResult);
+
+    int length = 10;
+    int width = 5;
+
+    float areaRect;
+
+    areaRect = length * width;
+
+    printf("%d\n", areaRect);
+
+    int marks1 = 70;
+    int marks2 = 80;
+    int marks3 = 90;
+
+    int avgMarks;
+
+    avgMarks = average(marks1, marks2, marks3);
+
+    printf("%d\n", avgMarks);
+
+    int data;
+
+    printf("%d\n", value);
+
+    int employeeId = "EMP101";
+
+    printf("%d\n", employeeId);
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+float average(int a, int b, int c)
+{
+    return (a + b + c) / 3.0;
+}
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+### SOLUTION :
+
+
+
+
+****** LINE WISE ERROR AND CORRECTION:
+___________
+
+________________________________________________________________________________________________________
+| Line No. | Error                         | Error Type                       | Correction                         |
+| -------- | ----------------------------- | -------------------------------- | ---------------------------------- |
+| 8        | `int age = "Twenty";`         | Type mismatch                    | `int age = 20;`                    |
+____________________________________________________________________________________________________________________
+| 14       | `char grade = "A";`           | String assigned to char          | `char grade = 'A';`                |
+____________________________________________________________________________________________________________________
+| 16       | `printf("%d\n", salary);`     | Wrong format specifier           | `printf("%f\n", salary);`          |
+____________________________________________________________________________________________________________________
+| 18       | `printf("%f\n", marks);`      | Wrong format specifier           | `printf("%d\n", marks);`           |
+____________________________________________________________________________________________________________________
+| 22       | `score` not declared          | Undeclared variable              | Use `marks` or declare `score`     |
+____________________________________________________________________________________________________________________
+| 25       | `int x = 20;`                 | Redeclaration                    | `x = 20;`                          |
+____________________________________________________________________________________________________________________
+| 27       | `100 = x;`                    | Invalid assignment               | `x = 100;`                         |
+____________________________________________________________________________________________________________________
+| 31       | `printf("%s\n", num);`        | Wrong format specifier           | `printf("%d\n", num);`             |
+____________________________________________________________________________________________________________________
+| 35       | `printf("%d\n", pi);`         | Wrong format specifier           | `printf("%f\n", pi);`              |
+____________________________________________________________________________________________________________________
+| 39       | `arr[2.5] = 100;`             | Array index must be integer      | `arr[2] = 100;`                    |
+____________________________________________________________________________________________________________________
+| 45       | `add(10);`                    | Missing argument                 | `add(10,20);`                      |
+____________________________________________________________________________________________________________________
+| 53       | `average(10,20);`             | Missing argument                 | `average(10,20,30);`               |
+____________________________________________________________________________________________________________________
+| 57       | `int temperature = "35";`     | Type mismatch                    | `int temperature = 35;`            |
+____________________________________________________________________________________________________________________
+| 61       | `float discount = "10.5";`    | Type mismatch                    | `float discount = 10.5;`           |
+___________________________________________________________________________________________________________________
+| 69       | `name = "Robil";`             | Cannot assign string to array    | `strcpy(name,"Robil");`            |
+____________________________________________________________________________________________________________________
+| 73       | `totalMarks` not declared     | Undeclared variable              | Declare it or use correct variable |
+____________________________________________________________________________________________________________________
+| 79       | `printf("%d\n", rate);`       | Wrong format specifier           | `printf("%f\n", rate);`            |
+____________________________________________________________________________________________________________________
+| 87       | `add(a,b,c);`                 | Extra argument, `c` undeclared   | `add(a,b);`                        |
+____________________________________________________________________________________________________________________
+| 99       | `if(studentMarks = 100)`      | Assignment instead of comparison | `if(studentMarks == 100)`          |
+____________________________________________________________________________________________________________________
+| 105      | `int size = "Large";`         | Type mismatch                    | Use string: `char size[]="Large";` |
+____________________________________________________________________________________________________________________
+| 109      | `printf("%d\n", percentage);` | Wrong format specifier           | `printf("%f\n", percentage);`      |
+___________________________________________________________________________________________________________________
+| 113      | `arr2["five"] = 100;`         | String used as index             | `arr2[5] = 100;`                   |
+____________________________________________________________________________________________________________________
+| 122      | `case "2":`                   | String used in case label        | `case 2:`                          |
+____________________________________________________________________________________________________________________
+| 129      | `multiply(10,20);`            | Function not declared/defined    | Define `multiply()`                |
+____________________________________________________________________________________________________________________
+| 139      | `printf("%d\n", areaRect);`   | Wrong format specifier           | `printf("%f\n", areaRect);`        |
+____________________________________________________________________________________________________________________
+| 149      | `avgMarks = average(...)`     | Float assigned to int            | `float avgMarks;`                  |
+____________________________________________________________________________________________________________________
+| 151      | `printf("%d\n", avgMarks);`   | Wrong format specifier           | `printf("%f\n", avgMarks);`        |
+____________________________________________________________________________________________________________________
+| 155      | `value` not declared          | Undeclared variable              | Declare `value`                    |
+____________________________________________________________________________________________________________________
+| 157      | `int employeeId = "EMP101";`  | Type mismatch                    | `char employeeId[]="EMP101";`      |
+____________________________________________________________________________________________________________________
+| 159      | `printf("%d\n", employeeId);` | Wrong format specifier           | `printf("%s\n", employeeId);`      |
+____________________________________________________________________________________________________________________
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+****** CORRECT PROGRAM :
+
+
+#include <stdio.h>
+#include <string.h>
+
+int add(int a, int b);
+int multiply(int a, int b);
+float average(int a, int b, int c);
+
+int main()
+{
+    int age = 20;
+    float salary = 50000.50;
+    int marks = 85;
+    char grade = 'A';
+
+    printf("%f\n", salary);
+    printf("%d\n", marks);
+
+    int total = marks + 15;
+
+    int x = 10;
+    x = 20;
+    x = 100;
+
+    int num = 25;
+    printf("%d\n", num);
+
+    float pi = 3.14;
+    printf("%f\n", pi);
+
+    int arr[5];
+    arr[2] = 100;
+
+    char ch = 65;
+
+    int result = add(10, 20);
+    printf("%d\n", result);
+
+    float avg = average(10, 20, 30);
+    printf("%f\n", avg);
+
+    int temperature = 35;
+
+    int amount = 1000;
+    float discount = 10.5;
+    amount = amount - discount;
+
+    char name[20];
+    strcpy(name, "Robil");
+    printf("%s\n", name);
+
+    int totalMarks = 80;
+    int count = totalMarks + 10;
+
+    int number = 50;
+    printf("%c\n", number);
+
+    float rate = 7.5;
+    printf("%f\n", rate);
+
+    int a = 10, b = 20;
+    int sum = add(a, b);
+    printf("%d\n", sum);
+
+    float radius = 5.5;
+    float area = 3.14 * radius * radius;
+    printf("%f\n", area);
+
+    int studentMarks = 90;
+
+    if(studentMarks == 100)
+    {
+        printf("Perfect Score\n");
+    }
+
+    char size[] = "Large";
+    printf("%s\n", size);
+
+    float percentage = 89.75;
+    printf("%f\n", percentage);
+
+    int arr2[10];
+    arr2[5] = 100;
+
+    int choice = 2;
+
+    switch(choice)
+    {
+        case 1:
+            printf("One\n");
+            break;
+
+        case 2:
+            printf("Two\n");
+            break;
+    }
+
+    int finalResult = multiply(10,20);
+    printf("%d\n", finalResult);
+
+    int length = 10, width = 5;
+    float areaRect = length * width;
+    printf("%f\n", areaRect);
+
+    float avgMarks = average(70,80,90);
+    printf("%f\n", avgMarks);
+
+    int value = 100;
+    printf("%d\n", value);
+
+    char employeeId[] = "EMP101";
+    printf("%s\n", employeeId);
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+int multiply(int a, int b)
+{
+    return a * b;
+}
+
+float average(int a, int b, int c)
+{
+    return (a + b + c) / 3.0;
+}
+
+
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+###PROBLEM 4:
+==============
+
+
+
+#include <stdio.h>
+
+void displayMenu();
+
+void calculateSalary(float basic);
+
+int add(int a, int b);
+
+float calculateArea(float radius);
+
+void printStudentDetails();
+
+int findMaximum(int a, int b);
+
+void showResult();
+
+float calculateAverage(int a, int b, int c);
+
+extern int totalStudents;
+
+extern float companyProfit;
+
+int main()
+
+{
+
+int choice = 1;
+  
+
+  
+displayMenu();
+  
+
+  
+int sum = add(10,20);
+  
+
+  
+printf("Sum = %d\n", sum);
+  
+
+  
+float area = calculateArea(7.5);
+  
+
+  
+printf("Area = %.2f\n", area);
+  
+
+  
+calculateSalary(50000);
+  
+
+  
+printStudentDetails();
+  
+
+  
+int max = findMaximum(10,20);
+  
+
+  
+printf("Max = %d\n", max);
+  
+
+  
+showResult();
+  
+
+  
+float avg = calculateAverage(70,80,90);
+  
+
+  
+printf("Average = %.2f\n", avg);
+  
+
+  
+printf("Students = %d\n", totalStudents);
+  
+
+  
+printf("Profit = %.2f\n", companyProfit);
+  
+
+  
+generateReport();
+  
+
+  
+displayEmployee();
+  
+
+  
+processData();
+  
+
+  
+saveRecord();
+  
+
+  
+loadRecord();
+  
+
+  
+printInvoice();
+  
+
+  
+calculateTax();
+  
+
+  
+validateUser();
+  
+
+  
+sendNotification();
+  
+
+  
+generateCertificate();
+  
+
+  
+return 0;
+
+}
+
+void displayMenu()
+
+{
+
+printf("1. Add\n");
+  
+printf("2. Subtract\n");
+  
+printf("3. Exit\n");
+
+}
+
+int add(int a, int b)
+
+{
+
+return a + b;
+
+}
+
+float calculateArea(float radius)
+
+{
+
+return 3.14f * radius * radius;
+
+}
+
+int findMaximum(int a, int b)
+
+{
+
+if(a > b)
+  
+    return a;
+  
+else
+  
+    return b;
+
+}
+
+int totalStudents = 500;
+
+/* Missing Definitions Below */
+
+void employeeSection()
+
+{
+
+printf("Employee Section\n");
+
+}
+
+void studentSection()
+
+{
+
+printf("Student Section\n");
+
+}
+
+void adminSection()
+
+{
+
+printf("Admin Section\n");
+
+}
+
+void financeSection()
+
+{
+
+printf("Finance Section\n");
+
+}
+
+void reportSection()
+
+{
+
+printf("Report Section\n");
+
+}
+
+void utilitySection()
+
+{
+
+printf("Utility Section\n");
+
+}
+
+void backupSection()
+
+{
+
+printf("Backup Section\n");
+
+}
+
+void settingsSection()
+
+{
+
+printf("Settings Section\n");
+
+}
+
+void helpSection()
+
+{
+
+printf("Help Section\n");
+
+}
+
+void contactSection()
+
+{
+
+printf("Contact Section\n");
+
+}
+
+int addNumbers(int x, int y)
+
+{
+
+return x + y;
+
+}
+
+float findPercentage(int marks, int total)
+
+{
+
+return (marks * 100.0f) / total;
+
+}
+
+void printLine()
+
+{
+
+printf("--------------------\n");
+
+}
+
+void welcome()
+
+{
+
+printf("Welcome User\n");
+
+}
+
+void goodbye()
+
+{
+
+printf("Thank You\n");
+
+}
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+******LINE WISE ERROR AND CORRECTION:
+
+
+____________________________________________________________________________________________________________________________________-
+| Line No. (Approx.) | Code                                        | Error Type              | Error Description                                                 | Correction                                    
+| ------------------ | ------------------------------------------- | ----------------------- | -------------------------------------
+
+| 68                 | `printf("Profit = %.2f\n", companyProfit);` | Compile-time (Semantic) | `companyProfit` is defined
+
+| 70                 | `generateReport();`                         | Compile-time (Semantic) | Function called a& datatype      
+
+| 72                 | `displayEmployee();`                        | Compile-time (Semantic) | Function not declared and defined.                                
+
+| 74                 | `processData();`                            | Compile-time (Semantic) | Function not declared and defined.                                
+|             
+
+| 76                 | `saveRecord();`                             | Compile-time (Semantic) | Function not declared and datatype.                                |                 
+
+| 78                 | `loadRecord();`                             | Compile-time (Semantic) | Function not declared and datatype.                                |
+
+| 80                 | `printInvoice();`                           | Compile-time (Semantic) | Function not declared and datatype.                                |
+
+| 82                 | `calculateTax();`                           | Compile-time (Semantic) | Function not declared and datatype.                                | 
+
+| 84                 | `validateUser();`                           | Compile-time (Semantic) | Function not declared and datatype.                                | 
+
+| 86                 | `sendNotification();`                       | Compile-time (Semantic) | Function not declared and datatype.                                | 
+
+| 88                 | `generateCertificate();`                    | Compile-time (Semantic) | Function not declared and defined.                                |
+
+| 7                  | `void calculateSalary(float basic);`        | Compile-time (Semantic) | Function declared but definition                          |
+
+| 10                 | `void printStudentDetails();`               | Compile-time (Semantic) | Function not declared                         |
+
+| 12                 | `void showResult();`                        | Compile-time (Semantic) | function not declared                      |____________________________________________________________________________________________________________________________________
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+******CORRECT PROGRAM:
+
+
+
+#include <stdio.h>
+
+void displayMenu();
+
+void calculateSalary(float basic);
+
+int add(int a, int b);
+
+float calculateArea(float radius);
+
+void printStudentDetails();
+
+int findMaximum(int a, int b);
+
+void showResult();
+
+float calculateAverage(int a, int b, int c);
+
+void generateReport();
+
+void displayEmployee();
+
+void processData();
+
+void saveRecord();
+
+void loadRecord();
+
+void printInvoice();
+
+void calculateTax();
+
+void validateUser();
+
+void sendNotification();
+
+void generateCertificate();
+
+int totalStudents = 500;
+
+float companyProfit = 100000.0f;
+
+int main()
+{
+    displayMenu();
+
+    printf("Sum = %d\n", add(10,20));
+
+    printf("Area = %.2f\n", calculateArea(7.5));
+
+    calculateSalary(50000);
+
+    printStudentDetails();
+
+    printf("Max = %d\n", findMaximum(10,20));
+
+    showResult();
+
+    printf("Average = %.2f\n", calculateAverage(70,80,90));
+
+    printf("Students = %d\n", totalStudents);
+
+    printf("Profit = %.2f\n", companyProfit);
+
+    generateReport();
+
+    displayEmployee();
+
+
+    processData();
+
+    saveRecord();
+
+    loadRecord();
+
+    printInvoice();
+
+    calculateTax();
+
+    validateUser();
+
+    sendNotification();
+
+    generateCertificate();
+
+    return 0;
+}
+
+void displayMenu()
+{
+    printf("1. Add\n2. Subtract\n3. Exit\n");
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+float calculateArea(float radius)
+{
+    return 3.14f * radius * radius;
+}
+
+void calculateSalary(float basic)
+{
+    printf("Salary = %.2f\n", basic);
+}
+
+void printStudentDetails()
+{
+    printf("Student Details\n");
+}
+
+int findMaximum(int a, int b)
+{
+    return (a > b) ? a : b;
+}
+
+void showResult()
+{
+    printf("Result Displayed\n");
+}
+
+float calculateAverage(int a, int b, int c)
+{
+    return (a + b + c) / 3.0f;
+}
+
+void generateReport()
+
+ { printf("Report Generated\n");
+ }
+
+void displayEmployee()
+ { printf("Employee Displayed\n");
+ }
+
+void processData() 
+{ printf("Data Processed\n");
+ }
+
+void saveRecord()
+ { printf("Record Saved\n");
+ }
+
+void loadRecord()
+ { printf("Record Loaded\n");
+ }
+
+void printInvoice()
+ { printf("Invoice Printed\n");
+ }
+
+void calculateTax()
+ { printf("Tax Calculated\n");
+ }
+
+void validateUser()
+ { printf("User Validated\n");
+ }
+
+void sendNotification()
+ { printf("Notification Sent\n");
+ }
+
+void generateCertificate()
+ { printf("Certificate Generated\n");
+ }
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+
+
+###PROGRAM -5:
+===================
+
+
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <string.h>
+
+int main()
+
+{
+
+printf("Runtime Error Practice Program\n");
+
+
+
+int a = 100;
+
+int b = 0;
+
+
+
+printf("Division Result = %d\n", a / b);
+
+
+
+int *ptr1 = NULL;
+
+
+
+*ptr1 = 50;
+
+
+
+int arr[5];
+
+
+
+arr[10] = 100;
+
+
+
+int *ptr2;
+
+
+
+*ptr2 = 200;
+
+
+
+char name[5];
+
+
+
+strcpy(name, "Programming");
+
+
+
+printf("%s\n", name);
+
+
+
+int *ptr3;
+
+
+
+printf("%d\n", *ptr3);
+
+
+
+FILE *fp;
+
+
+
+fp = fopen("unknown.txt", "r");
+
+
+
+fscanf(fp, "%d", &a);
+
+
+
+fclose(fp);
+
+
+
+char *ptr4 = malloc(5);
+
+
+
+strcpy(ptr4, "Computer Science");
+
+
+
+printf("%s\n", ptr4);
+
+
+
+free(ptr4);
+
+
+
+printf("%c\n", ptr4[0]);
+
+
+
+int *ptr5 = malloc(sizeof(int));
+
+
+
+free(ptr5);
+
+
+
+free(ptr5);
+
+
+
+int x = 5;
+
+
+
+int y = 0;
+
+
+
+int result = x % y;
+
+
+
+printf("%d\n", result);
+
+
+
+char str1[10] = "Hello";
+
+
+
+strcat(str1, "WorldProgramming");
+
+
+
+printf("%s\n", str1);
+
+
+
+int *numbers;
+
+
+
+numbers = malloc(3 * sizeof(int));
+
+
+
+for(int i=0; i<10; i++)
+
+{
+
+    numbers[i] = i;
+
+}
+
+
+
+free(numbers);
+
+
+
+int matrix[3][3];
+
+
+
+matrix[5][5] = 100;
+
+
+
+int *ptr6 = NULL;
+
+
+
+printf("%d\n", ptr6[0]);
+
+
+
+char password[8];
+
+
+
+gets(password);
+
+
+
+printf("%s\n", password);
+
+
+
+int *ptr7 = malloc(sizeof(int));
+
+
+
+*ptr7 = 500;
+
+
+
+free(ptr7);
+
+
+
+*ptr7 = 1000;
+
+
+
+int age;
+
+
+
+printf("Age = %d\n", age);
+
+
+
+int index = -1;
+
+
+
+arr[index] = 50;
+
+
+
+int *ptr8;
+
+
+
+if(*ptr8 > 0)
+
+{
+
+    printf("Positive\n");
+
+}
+
+
+
+char *text = NULL;
+
+
+
+printf("%s\n", text);
+
+
+
+int size = 1000000000;
+
+
+
+int *hugeArray;
+
+
+
+hugeArray = malloc(size * sizeof(int));
+
+
+
+hugeArray[0] = 1;
+
+
+
+free(hugeArray);
+
+
+
+int *ptr9 = NULL;
+
+
+
+while(1)
+
+{
+
+    ptr9++;
+
+}
+
+
+
+printf("End of Program\n");
+
+
+
+return 0;
+
+}
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+*******LINEWISE ERROR AND CORRECTION:
+
+
+               
+
+
+____________________________________________________________________________________________________________________________________
+| Line No. (Approx.) | Code                               | Error Type                    |  Correction                              
+| ------------------ | ---------------------------------- | ----------------------------- | ---------------------------------------  
+| 11                 | `a / b`                            | Runtime Error                 | Check `b != 0` before division.          |
+| 15                 | `*ptr1 = 50;`                      | Runtime Error                 | Allocate memory or assign valid address. |
+| 19                 | `arr[10] = 100;`                   | Runtime Error                 | Use indices 0–4 only.                    |
+| 23                 | `*ptr2 = 200;`                     | Runtime Error                 | Initialize pointer before use.           |
+| 27                 | `strcpy(name,"Programming");`      | Runtime Error                 | Increase array size.                     |
+| 33                 | `printf("%d", *ptr3);`             | Runtime Error                 | Initialize pointer.                      |
+| 39                 | `fscanf(fp,...)`                   | Runtime Error                 | Check `if(fp != NULL)`.                  |
+| 45                 | `strcpy(ptr4,"Computer Science");` | Runtime Error                 | Allocate sufficient memory.              |
+| 51                 | `ptr4[0]` after `free(ptr4)`       | Runtime Error                 | Don't access freed memory.               |
+| 57                 | `free(ptr5); free(ptr5);`          | Runtime Error                 | Free memory only once.                   |
+| 63                 | `x % y`                            | Runtime Error                 | Check `y != 0`.                          |
+| 69                 | `strcat(str1,"WorldProgramming");` | Runtime Error                 | Increase array size.                     |
+| 77                 | `numbers[i]` (i=3 to 9)            | Runtime Error                 | Allocate 10 elements or loop to 2.       |
+| 83                 | `matrix[5][5]=100;`                | Runtime Error                 | Use indices 0–2.                         |
+| 87                 | `ptr6[0]`                          | Runtime Error                 | Allocate memory first.                   |
+| 91                 | `gets(password);`                  | Runtime Error / Security Risk | Use `fgets()`.                           |
+| 99                 | `*ptr7=1000;` after free           | Runtime Error                 | Don't access freed memory.               |
+| 103                | `printf("%d", age);`               | Logical Error                 | Initialize `age`.                        |
+| 107                | `arr[index]` where index=-1        | Runtime Error                 | Validate index.                          |
+| 111                | `if(*ptr8 > 0)`                    | Runtime Error                 | Initialize pointer.                      |
+| 119                | `printf("%s", text);`              | Runtime Error                 | Check for NULL.                          |
+| 127                | `hugeArray[0]=1;`                  | Runtime Error                 | Check allocation result.                 |
+| 135                | `while(1){ ptr9++; }`              | Logical/Runtime Error         | Add termination condition.               |_____________________________________________________________________________________________________________________________________
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+******CORRECT PROGRAM:
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    printf("Runtime Error Practice Program\n");
+
+    int a = 100;
+    int b = 10;
+
+    printf("Division Result = %d\n", a / b);
+
+    int value1;
+    int *ptr1 = &value1;
+    *ptr1 = 50;
+    printf("ptr1 Value = %d\n", *ptr1);
+
+    int arr[5];
+    arr[4] = 100;
+    printf("Array Element = %d\n", arr[4]);
+
+    int value2;
+    int *ptr2 = &value2;
+    *ptr2 = 200;
+    printf("ptr2 Value = %d\n", *ptr2);
+
+    char name[20];
+    strcpy(name, "Programming");
+    printf("%s\n", name);
+
+    int value3 = 300;
+    int *ptr3 = &value3;
+    printf("%d\n", *ptr3);
+
+    FILE *fp = fopen("sample.txt", "w");
+    if(fp != NULL)
+    {
+        fprintf(fp, "123");
+        fclose(fp);
+    }
+
+    fp = fopen("sample.txt", "r");
+    if(fp != NULL)
+    {
+        fscanf(fp, "%d", &a);
+        printf("File Value = %d\n", a);
+        fclose(fp);
+    }
+
+    char *ptr4 = malloc(50);
+    strcpy(ptr4, "Computer Science");
+    printf("%s\n", ptr4);
+    free(ptr4);
+    ptr4 = NULL;
+
+    int *ptr5 = malloc(sizeof(int));
+    *ptr5 = 500;
+    printf("ptr5 = %d\n", *ptr5);
+    free(ptr5);
+
+    int x = 5;
+    int y = 2;
+    int result = x % y;
+    printf("Modulo Result = %d\n", result);
+
+    char str1[30] = "Hello";
+    strcat(str1, " World");
+    printf("%s\n", str1);
+
+    int *numbers = malloc(10 * sizeof(int));
+
+    for(int i = 0; i < 10; i++)
+    {
+        numbers[i] = i;
+    }
+
+    printf("Numbers: ");
+    for(int i = 0; i < 10; i++)
+    {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
+
+    free(numbers);
+
+    int matrix[3][3];
+    matrix[2][2] = 100;
+    printf("Matrix Element = %d\n", matrix[2][2]);
+
+    int value6 = 600;
+    int *ptr6 = &value6;
+    printf("%d\n", ptr6[0]);
+
+    char password[20];
+    strcpy(password, "mypassword");
+    printf("Password = %s\n", password);
+
+    int *ptr7 = malloc(sizeof(int));
+    *ptr7 = 500;
+    printf("ptr7 = %d\n", *ptr7);
+    free(ptr7);
+
+    int age = 20;
+    printf("Age = %d\n", age);
+
+    int index = 2;
+    arr[index] = 50;
+    printf("arr[%d] = %d\n", index, arr[index]);
+
+    int value8 = 10;
+    int *ptr8 = &value8;
+
+    if(*ptr8 > 0)
+    {
+        printf("Positive\n");
+    }
+
+    char *text = "Hello World";
+    printf("%s\n", text);
+
+    int size = 1000;
+    int *hugeArray = malloc(size * sizeof(int));
+
+    if(hugeArray != NULL)
+    {
+        hugeArray[0] = 1;
+        printf("Huge Array First Element = %d\n", hugeArray[0]);
+        free(hugeArray);
+    }
+
+    printf("End of Program\n");
+
+    return 0;
+}
+
+
+
+
+******* OUTPUT:
+
+
+
+
+Runtime Error Practice Program
+
+Division Result = 10
+
+ptr1 Value = 50
+
+Array Element = 100
+
+ptr2 Value = 200
+Programming
+
+300
+File Value = 123
+
+Computer Science
+ptr5 = 500
+
+Modulo Result = 1
+Hello World
+
+Numbers: 0 1 2 3 4 5 6 7 8 9
+Matrix Element = 100
+
+600
+Password = mypassword
+ptr7 = 500
+
+Age = 20
+arr[2] = 50
+
+Positive
+Hello World
+Huge Array First Element = 1
+
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+
+
+###PROBLEM-6:  
+==============
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    int marks;
+    int year;
+    int age;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    if(num % 2 == 1)
+        printf("Number is Even\n");
+    else
+        printf("Number is Odd\n");
+
+    printf("\n");
+
+    printf("Enter marks: ");
+    scanf("%d",&marks);
+
+    if(marks >= 90)
+        printf("Grade B\n");
+    else if(marks >= 80)
+        printf("Grade A\n");
+    else if(marks >= 70)
+        printf("Grade C\n");
+    else if(marks >= 60)
+        printf("Grade D\n");
+    else
+        printf("Fail\n");
+
+    printf("\n");
+
+    printf("Enter year: ");
+    scanf("%d",&year);
+
+    if(year % 4 == 0)
+        printf("Leap Year\n");
+    else
+        printf("Not Leap Year\n");
+
+    printf("\n");
+
+    printf("Enter age: ");
+    scanf("%d",&age);
+
+    if(age > 18)
+        printf("Not Eligible for Voting\n");
+    else
+        printf("Eligible for Voting\n");
+
+    printf("\n");
+
+    int a = 10;
+    int b = 20;
+
+    if(a > b)
+        printf("Smaller Number = %d\n", a);
+    else
+        printf("Smaller Number = %d\n", b);
+
+    printf("\n");
+
+    int x = 10;
+    int y = 20;
+    int z = 30;
+
+    int largest = x;
+
+    if(y < largest)
+        largest = y;
+
+    if(z < largest)
+        largest = z;
+
+    printf("Largest Number = %d\n", largest);
+
+    printf("\n");
+
+    int totalMarks = 250;
+    int subjects = 3;
+
+    float average;
+
+    average = totalMarks / subjects;
+
+    printf("Average = %.2f\n", average);
+
+    printf("\n");
+
+    int radius = 7;
+
+    float area;
+
+    area = 2 * 3.14 * radius * radius;
+
+    printf("Circle Area = %.2f\n", area);
+
+    printf("\n");
+
+    int salary = 50000;
+
+    float bonus;
+
+    if(salary > 30000)
+        bonus = salary * 0.02;
+    else
+        bonus = salary * 0.20;
+
+    printf("Bonus = %.2f\n", bonus);
+
+    printf("\n");
+
+    int month = 4;
+
+    switch(month)
+    {
+        case 1:
+            printf("February\n");
+            break;
+
+        case 2:
+            printf("March\n");
+            break;
+
+        case 3:
+            printf("April\n");
+            break;
+
+        case 4:
+            printf("May\n");
+            break;
+
+        default:
+            printf("Invalid Month\n");
+    }
+
+    printf("\n");
+
+    int n = 13;
+    int isPrime = 1;
+
+    for(int i=2;i<n;i++)
+    {
+        if(n % i == 0)
+        {
+            isPrime = 1;
+            break;
+        }
+    }
+
+    if(isPrime)
+        printf("Not Prime\n");
+    else
+        printf("Prime\n");
+
+    printf("\n");
+
+    int purchaseAmount = 5000;
+
+    float discount = 0;
+
+    if(purchaseAmount > 1000)
+        discount = 5;
+
+    float finalAmount;
+
+    finalAmount = purchaseAmount + discount;
+
+    printf("Final Amount = %.2f\n", finalAmount);
+
+    printf("\n");
+
+    int sum = 0;
+
+    for(int i=1;i<=10;i++)
+    {
+        sum = i;
+    }
+
+    printf("Sum = %d\n", sum);
+
+    printf("\n");
+
+    int temperature = 35;
+
+    if(temperature < 40)
+        printf("Cold Weather\n");
+    else
+        printf("Hot Weather\n");
+
+    printf("\n");
+
+    char grade = 'A';
+
+    if(grade == 'A')
+        printf("Average Performance\n");
+    else
+        printf("Excellent Performance\n");
+
+    printf("\n");
+
+    int length = 10;
+    int width = 5;
+
+    int rectangleArea;
+
+    rectangleArea = length + width;
+
+    printf("Rectangle Area = %d\n", rectangleArea);
+
+    printf("\n");
+
+    int percentage = 75;
+
+    if(percentage >= 60)
+        printf("Fail\n");
+    else
+        printf("Pass\n");
+
+    printf("\n");
+
+    printf("Program Completed Successfully\n");
+
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+****LINEWISE ERROR AND CORRECTION:
+
+
+_____________________________________________________________________________________________________________________
+| Line No. | Code                                       | Error Type    | Correction                                 |
+| -------- | ------------------------------------------ | ------------- | ------------------------------------------ |
+| 11       | `if(num % 2 == 1)`                         | Logical Error | `if(num % 2 == 0)`                         |
+
+| 21       | `printf("Grade B\n");`                     | Logical Error | `printf("Grade A\n");`                     |
+
+| 23       | `printf("Grade A\n");`                     | Logical Error | `printf("Grade B\n");`                     |
+
+| 44       | `if(age > 18)`                             | Logical Error | `if(age >= 18)`                            |
+
+| 45       | `printf("Not Eligible for Voting\n");`     | Logical Error | `printf("Eligible for Voting\n");`         |
+
+| 47       | `printf("Eligible for Voting\n");`         | Logical Error | `printf("Not Eligible for Voting\n");`     |
+
+| 55       | `printf("Smaller Number = %d\n", b);`      | Logical Error | `printf("Smaller Number = %d\n", a);`      |
+
+| 66       | `if(y < largest)`                          | Logical Error | `if(y > largest)`                          |
+
+| 69       | `if(z < largest)`                          | Logical Error | `if(z > largest)`                          |
+
+| 79       | `average = totalMarks / subjects;`         | Logical Error | `average = (float)totalMarks / subjects;`  |
+
+| 88       | `area = 2 * 3.14 * radius * radius;`       | Logical Error | `area = 3.14 * radius * radius;`           |
+
+| 98       | `bonus = salary * 0.02;`                   | Logical Error | `bonus = salary * 0.20;`                   |
+
+| 112      | `printf("May\n");`                         | Logical Error | `printf("April\n");`                       |
+
+| 131      | `isPrime = 1;`                             | Logical Error | `isPrime = 0;`                             |
+
+| 137      | `printf("Not Prime\n");`                   | Logical Error | `printf("Prime\n");`                       |
+
+| 139      | `printf("Prime\n");`                       | Logical Error | `printf("Not Prime\n");`                   |
+
+| 150      | `finalAmount = purchaseAmount + discount;` | Logical Error | `finalAmount = purchaseAmount - discount;` |
+
+| 161      | `sum = i;`                                 | Logical Error | `sum += i;`                                |
+
+| 170      | `printf("Cold Weather\n");`                | Logical Error | `printf("Hot Weather\n");`                 |
+
+| 181      | `printf("Average Performance\n");`         | Logical Error | `printf("Excellent Performance\n");`       |
+
+| 193      | `rectangleArea = length + width;`          | Logical Error | `rectangleArea = length * width;`          |
+
+| 202      | `printf("Fail\n");`                        | Logical Error | `printf("Pass\n");`                        |
+
+| 204      | `printf("Pass\n");`                        | Logical Error | `printf("Fail\n");`                        |
+|_____________________________________________________________________________________________________________________|
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+******CORRECT PROGRAM:
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int num, marks, year, age;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num % 2 == 0)
+        printf("Number is Even\n");
+    else
+        printf("Number is Odd\n");
+
+    printf("\n");
+
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+
+    if(marks >= 90)
+        printf("Grade A\n");
+    else if(marks >= 80)
+        printf("Grade B\n");
+    else if(marks >= 70)
+        printf("Grade C\n");
+    else if(marks >= 60)
+        printf("Grade D\n");
+    else
+        printf("Fail\n");
+
+    printf("\n");
+
+    printf("Enter year: ");
+    scanf("%d", &year);
+
+    if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        printf("Leap Year\n");
+    else
+        printf("Not Leap Year\n");
+
+    printf("\n");
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    if(age >= 18)
+        printf("Eligible for Voting\n");
+    else
+        printf("Not Eligible for Voting\n");
+
+    printf("\n");
+
+    int a = 10, b = 20;
+
+    if(a < b)
+        printf("Smaller Number = %d\n", a);
+    else
+        printf("Smaller Number = %d\n", b);
+
+    printf("\n");
+
+    int x = 10, y = 20, z = 30;
+    int largest = x;
+
+    if(y > largest)
+        largest = y;
+
+    if(z > largest)
+        largest = z;
+
+    printf("Largest Number = %d\n", largest);
+
+    printf("\n");
+
+    int totalMarks = 250;
+    int subjects = 3;
+
+    float average = (float)totalMarks / subjects;
+
+    printf("Average = %.2f\n", average);
+
+    printf("\n");
+
+    int radius = 7;
+    float area = 3.14f * radius * radius;
+
+    printf("Circle Area = %.2f\n", area);
+
+    printf("\n");
+
+    int salary = 50000;
+    float bonus;
+
+    if(salary > 30000)
+        bonus = salary * 0.20f;
+    else
+        bonus = salary * 0.02f;
+
+    printf("Bonus = %.2f\n", bonus);
+
+    printf("\n");
+
+    int month = 4;
+
+    switch(month)
+    {
+        case 1: printf("January\n"); break;
+        case 2: printf("February\n"); break;
+        case 3: printf("March\n"); break;
+        case 4: printf("April\n"); break;
+        default: printf("Invalid Month\n");
+    }
+
+    printf("\n");
+
+    int n = 13;
+    int isPrime = 1;
+
+    for(int i = 2; i <= n / 2; i++)
+    {
+        if(n % i == 0)
+        {
+            isPrime = 0;
+            break;
+        }
+    }
+
+    if(isPrime)
+        printf("Prime\n");
+    else
+        printf("Not Prime\n");
+
+    printf("\n");
+
+    int purchaseAmount = 5000;
+    float discount = 0;
+
+    if(purchaseAmount > 1000)
+        discount = purchaseAmount * 0.05f;
+
+    float finalAmount = purchaseAmount - discount;
+
+    printf("Final Amount = %.2f\n", finalAmount);
+
+    printf("\n");
+
+    int sum = 0;
+
+    for(int i = 1; i <= 10; i++)
+    {
+        sum += i;
+    }
+
+    printf("Sum = %d\n", sum);
+
+    printf("\n");
+
+    int temperature = 35;
+
+    if(temperature < 30)
+        printf("Cold Weather\n");
+    else
+        printf("Hot Weather\n");
+
+    printf("\n");
+
+    char grade = 'A';
+
+    if(grade == 'A')
+        printf("Excellent Performance\n");
+    else
+        printf("Average Performance\n");
+
+    printf("\n");
+
+    int length = 10, width = 5;
+    int rectangleArea = length * width;
+
+    printf("Rectangle Area = %d\n", rectangleArea);
+
+    printf("\n");
+
+    int percentage = 75;
+
+    if(percentage >= 40)
+        printf("Pass\n");
+    else
+        printf("Fail\n");
+
+    printf("\n");
+
+    printf("Program Completed Successfully\n");
+
+    return 0;
+}
+
+
+
+
+
+*****OUTPUT:
+
+
+
+Number is Even
+
+Grade B
+
+Leap Year
+
+Eligible for Voting
+
+Smaller Number = 10
+
+Largest Number = 30
+
+Average = 83.33
+
+Circle Area = 153.86
+
+Bonus = 1000.00
+
+April
+
+Prime
+
+Final Amount = 4750.00
+
+Sum = 55
+
+Hot Weather
+
+Excellent Performance
+
+Rectangle Area = 50
+
+Pass
+
+Program Completed Successfully
+
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+
+
+###PROBLEM-7:
+================
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int marks[5] = {80, 75, 90, 85, 95};
+
+    printf("Student Marks\n");
+
+    for(int i=0; i<=5; i++)
+    {
+        printf("%d ", marks[i]);
+    }
+
+    printf("\n");
+
+    int total = 0;
+
+    for(int i=0; i<5; i++)
+    {
+        total += marks[i];
+    }
+
+    float average;
+
+    average = total / 5;
+
+    printf("Average = %.2f\n", average);
+
+    printf("\n");
+
+    int numbers[10];
+
+    for(int i=1; i<=10; i++)
+    {
+        numbers[i] = i * 10;
+    }
+
+    printf("Numbers Array\n");
+
+    for(int i=0; i<10; i++)
+    {
+        printf("%d ", numbers[i]);
+    }
+
+    printf("\n");
+
+    char name[10];
+
+    strcpy(name, "ComputerScience");
+
+    printf("%s\n", name);
+
+    printf("\n");
+
+    char city[20] = "Jaipur";
+
+    city = "Delhi";
+
+    printf("%s\n", city);
+
+    printf("\n");
+
+    char str1[20] = "Hello";
+    char str2[20] = "Hello";
+
+    if(str1 == str2)
+    {
+        printf("Strings are Equal\n");
+    }
+    else
+    {
+        printf("Strings are Different\n");
+    }
+
+    printf("\n");
+
+    char password[8];
+
+    printf("Enter Password: ");
+    gets(password);
+
+    printf("Password = %s\n", password);
+
+    printf("\n");
+
+    char firstName[20] = "Robil";
+    char lastName[20] = "Varshney";
+
+    strcat(firstName, lastName);
+
+    printf("%s\n", firstName);
+
+    printf("\n");
+
+    char grade[5];
+
+    grade[0] = 'A';
+    grade[1] = '+';
+
+    printf("%s\n", grade);
+
+    printf("\n");
+
+    int arr[5] = {1,2,3,4,5};
+
+    printf("%d\n", arr[-1]);
+
+    printf("\n");
+
+    char department[10];
+
+    scanf("%s", department);
+
+    printf("%s\n", department);
+
+    printf("\n");
+
+    char email[15] = "student@gmail.com";
+
+    printf("%s\n", email);
+
+    printf("\n");
+
+    int scores[3];
+
+    scores[0] = 90;
+    scores[1] = 80;
+    scores[2] = 70;
+    scores[3] = 60;
+
+    printf("%d\n", scores[3]);
+
+    printf("\n");
+
+    char subject[10] = "Programming";
+
+    printf("%s\n", subject);
+
+    printf("\n");
+
+    char username[20];
+
+    printf("Enter Username: ");
+    scanf("%s", username);
+
+    if(username == "admin")
+    {
+        printf("Valid User\n");
+    }
+    else
+    {
+        printf("Invalid User\n");
+    }
+
+    printf("\n");
+
+    char mobile[10];
+
+    strcpy(mobile, "987654321012");
+
+    printf("%s\n", mobile);
+
+    printf("\n");
+
+    int attendance[5] = {1,1,1,1,1};
+
+    int present = 0;
+
+    for(int i=0; i<=5; i++)
+    {
+        present += attendance[i];
+    }
+
+    printf("Present Days = %d\n", present);
+
+    printf("\n");
+
+    char course[20] = "C Programming";
+
+    printf("%c\n", course[20]);
+
+    printf("\n");
+
+    char college[20];
+
+    college[0] = 'A';
+    college[1] = 'C';
+    college[2] = 'E';
+    college[3] = 'I';
+    college[4] = 'T';
+
+    printf("%s\n", college);
+
+    printf("\n");
+
+    int rollNo[5];
+
+    for(int i=0; i<5; i++)
+    {
+        scanf("%d", &rollNo[i]);
+    }
+
+    printf("\nRoll Numbers\n");
+
+    for(int i=0; i<5; i++)
+    {
+        printf("%d ", rollNo[i]);
+    }
+
+    printf("\n");
+
+    char section[3] = "IT-A";
+
+    printf("%s\n", section);
+
+    printf("\n");
+
+    printf("Program Finished\n");
+
+    return 0;
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+*****LINEWISE ERROR AND CORRECTIONS:
+__________________________________________________________________________________________________________________________________
+| Line No. (Approx.) | Code                               | Type of Error                            | Correction                                       |
+| ------------------ | ---------------------------------- | ---------------------------------------- | --------------------
+| 9                  | `for(int i=0; i<=5; i++)`          | Runtime Error (Array Out of Bounds)      | `for(int i=0; i<5; i++)`                         |
+| 24                 | `average = total / 5;`             | Logical Error                            | `average = (float)total / 5;`                    |
+| 32                 | `for(int i=1; i<=10; i++)`         | Runtime Error (Array Out of Bounds)      | `for(int i=0; i<10; i++)`                        |
+| 34                 | `numbers[i] = i * 10;`             | Runtime Error                            | Use valid indices `0-9`                          |
+| 48                 | `strcpy(name, "ComputerScience");` | Runtime Error (Buffer Overflow)          | `char name[20];`                                 |
+| 56                 | `city = "Delhi";`                  | Compile-Time Error                       | `strcpy(city, "Delhi");`                         |
+| 68                 | `if(str1 == str2)`                 | Logical Error                            | `if(strcmp(str1,str2)==0)`                       |
+| 84                 | `gets(password);`                  | Runtime Error / Security Risk            fgets(password,sizeof(password) |
+| 94                 | `strcat(firstName, lastName);`     | Runtime Error (Buffer Overflow Possible) | Increase `firstName` size                        |
+| 106                | `printf("%s\n", grade);`           | Runtime Error (Missing Null Character)   | `grade[2]='\0';`                                 |
+| 114                | `printf("%d\n", arr[-1]);`         | Runtime Error                            | Use valid index `arr[0]
+
+| 136                | `scores[3] = 60;`                  | Runtime Error (Array Out of Bounds)      | `int scores[4];`                                 |
+| 138                | `printf("%d\n", scores[3]);`       | Runtime Error                            | Increase array size to 4                         |
+| 152                | `if(username == "admin")`          | Logical Error                            | `if(strcmp(username,"admin")`                |
+| 164                | `strcpy(mobile, "987654321012");`  | Runtime Error (Buffer Overflow)          | `char mobile[15];`                               |
+| 176                | `for(int i=0; i<=5; i++)`          | Runtime Error (Array Out of Bounds)      | `for(int i=0; i<5; i++)`                         |
+| 188                | `printf("%c\n", course[20]);`      | Runtime Error (Invalid Index)            | `printf("%c\n", course[0]);`                     |
+| 202                | `printf("%s\n", college);`         | Runtime Error (Missing Null Terminator)  | `college[5]='\0`strcpy
+
+| 220                | `char section[3] = "IT-A";`        | Compile-Time Warning / Runtime Error     | `char section[5] = "IT-A";`                      |____________________________________________________________________________________________________________________________________
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+*****CORRECT PROGRAM:
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int marks[5] = {80,75,90,85,95};
+
+    printf("Student Marks\n");
+
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ", marks[i]);
+    }
+
+    printf("\n");
+
+    int total = 0;
+
+    for(int i=0;i<5;i++)
+    {
+        total += marks[i];
+    }
+
+    float average = (float)total / 5;
+
+    printf("Average = %.2f\n\n", average);
+
+    int numbers[10];
+
+    for(int i=0;i<10;i++)
+    {
+        numbers[i] = (i + 1) * 10;
+    }
+
+    printf("Numbers Array\n");
+
+    for(int i=0;i<10;i++)
+    {
+        printf("%d ", numbers[i]);
+    }
+
+    printf("\n\n");
+
+    char name[20];
+    strcpy(name,"ComputerScience");
+
+    printf("%s\n\n", name);
+
+    char city[20] = "Jaipur";
+
+    strcpy(city,"Delhi");
+
+    printf("%s\n\n", city);
+
+    char str1[20] = "Hello";
+    char str2[20] = "Hello";
+
+    if(strcmp(str1,str2)==0)
+        printf("Strings are Equal\n");
+    else
+        printf("Strings are Different\n");
+
+    printf("\n");
+
+    char firstName[30] = "Robil";
+    char lastName[20] = "Varshney";
+
+    strcat(firstName,lastName);
+
+    printf("%s\n\n", firstName);
+
+    char grade[5];
+
+    grade[0]='A';
+    grade[1]='+';
+    grade[2]='\0';
+
+    printf("%s\n\n", grade);
+
+    int arr[5]={1,2,3,4,5};
+
+    printf("%d\n\n", arr[0]);
+
+    char department[20]="IT";
+
+    printf("%s\n\n", department);
+
+    char email[25]="student@gmail.com";
+
+    printf("%s\n\n", email);
+
+    int scores[4];
+
+    scores[0]=90;
+    scores[1]=80;
+    scores[2]=70;
+    scores[3]=60;
+
+    printf("%d\n\n", scores[3]);
+
+    char subject[20]="Programming";
+
+    printf("%s\n\n", subject);
+
+    char username[20]="admin";
+
+    if(strcmp(username,"admin")==0)
+        printf("Valid User\n");
+    else
+        printf("Invalid User\n");
+
+    printf("\n");
+
+    char mobile[15];
+
+    strcpy(mobile,"9876543210");
+
+    printf("%s\n\n", mobile);
+
+    int attendance[5]={1,1,1,1,1};
+
+    int present=0;
+
+    for(int i=0;i<5;i++)
+    {
+        present += attendance[i];
+    }
+
+    printf("Present Days = %d\n\n", present);
+
+    char course[20]="C Programming";
+
+    printf("%c\n\n", course[0]);
+
+    char college[20];
+
+    strcpy(college,"ACEIT");
+
+    printf("%s\n\n", college);
+
+    int rollNo[5]={101,102,103,104,105};
+
+    printf("Roll Numbers\n");
+
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ", rollNo[i]);
+    }
+
+    printf("\n\n");
+
+    char section[5]="IT-A";
+
+    printf("%s\n\n", section);
+
+    printf("Program Finished\n");
+
+    return 0;
+}
+
+****OUTPUT:
+
+
+
+Student Marks
+80 75 90 85 95
+
+Average = 85.00
+
+Numbers Array
+10 20 30 40 50 60 70 80 90 100
+
+ComputerScience
+
+Delhi
+
+Strings are Equal
+
+RobilVarshney
+
+A+
+
+1
+
+IT
+
+student@gmail.com
+
+60
+
+Programming
+
+Valid User
+
+9876543210
+
+Present Days = 5
+
+C
+
+ACEIT
+
+Roll Numbers
+101 102 103 104 105
+
+IT-A
+
+Program Finished
+
+
+
+
+
+______________________________________________________________________________________________________________________________________
+
+
+
+
+### PROBLEM-8:
+======================
+
+
+
+#include <stdio.h>
+
+int add(int a, int b);
+float average(int a, int b, int c);
+int factorial(int n);
+void swap(int a, int b);
+int maximum(int a, int b);
+int fibonacci(int n);
+
+int main()
+{
+    int num1 = 10;
+    int num2 = 20;
+
+    int result;
+
+    result = add(num1);
+
+    printf("Sum = %d\n", result);
+
+    float avg;
+
+    avg = average(70,80);
+
+    printf("Average = %.2f\n", avg);
+
+    int fact;
+
+    fact = factorial(5);
+
+    printf("Factorial = %d\n", fact);
+
+    printf("\n");
+
+    int x = 100;
+    int y = 200;
+
+    printf("Before Swap\n");
+    printf("%d %d\n", x, y);
+
+    swap(x,y);
+
+    printf("After Swap\n");
+    printf("%d %d\n", x, y);
+
+    printf("\n");
+
+    int max;
+
+    max = maximum(15,25);
+
+    printf("Maximum = %d\n", max);
+
+    printf("\n");
+
+    int fib;
+
+    fib = fibonacci(10);
+
+    printf("Fibonacci = %d\n", fib);
+
+    printf("\n");
+
+    int marks = 90;
+
+    calculateGrade(marks);
+
+    printf("\n");
+
+    int area;
+
+    area = circleArea(5);
+
+    printf("%d\n", area);
+
+    printf("\n");
+
+    int total;
+
+    total = sumArray();
+
+    printf("%d\n", total);
+
+    printf("\n");
+
+    displayResult();
+
+    printf("\n");
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+float average(int a, int b, int c)
+{
+    return (a + b + c) / 3;
+}
+
+int factorial(int n)
+{
+    if(n == 0)
+        return 0;
+
+    return n * factorial(n - 1);
+}
+
+void swap(int a, int b)
+{
+    int temp;
+
+    temp = a;
+    a = b;
+    b = temp;
+}
+
+int maximum(int a, int b)
+{
+    if(a > b)
+        return b;
+    else
+        return a;
+}
+
+int fibonacci(int n)
+{
+    if(n == 0)
+        return 0;
+
+    if(n == 1)
+        return 1;
+
+    return fibonacci(n) + fibonacci(n-1);
+}
+
+void printMessage()
+{
+    printf("Welcome\n");
+}
+
+int calculatePercentage(int marks, int total)
+{
+    return marks / total * 100;
+}
+
+float simpleInterest(float p, float r, float t)
+{
+    float si;
+
+    si = (p * r * t) / 100;
+
+    return;
+}
+
+void displayMenu()
+{
+    printf("1. Add\n");
+    printf("2. Subtract\n");
+    printf("3. Exit\n");
+}
+
+int power(int base, int exp)
+{
+    int result = 1;
+
+    for(int i=1; i<exp; i++)
+    {
+        result *= base;
+    }
+
+    return result;
+}
+
+int reverseNumber(int n)
+{
+    int rev = 0;
+
+    while(n > 0)
+    {
+        rev = rev * 10 + n % 10;
+        n = n / 10;
+    }
+}
+
+int countDigits(int n)
+{
+    int count = 0;
+
+    while(n > 0)
+    {
+        count++;
+        n = n / 10;
+    }
+
+    return count;
+}
+
+int isPrime(int n)
+{
+    for(int i=2; i<n; i++)
+    {
+        if(n % i == 0)
+            return 1;
+    }
+
+    return 0;
+}
+
+void updateValue(int x)
+{
+    x = 500;
+}
+
+int findMinimum(int a, int b)
+{
+    if(a < b)
+        return a;
+    else
+        return b;
+}
+
+void printArray(int arr[], int size)
+{
+    for(int i=0; i<=size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+}
+
+int recursiveDemo(int n)
+{
+    return recursiveDemo(n+1);
+}
+
+void greet()
+{
+    printf("Hello Students\n");
+}
+
+float rectangleArea(float length, float width)
+{
+    return length + width;
+}
+
+int square(int n)
+{
+    return n * n;
+}
+
+int cube(int n)
+{
+    return n * n;
+}
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+*****LINEWISE ERROR AND CORRECTION:
+____________________________________________________________________________________________________________________________________
+| Line No. (Approx.) | Code                                    | Type of Error                        | Correction                                   |
+| ------------------ | --------------------------------------- | ------------------------------------ | ------------------------
+| 15                 | `result = add(num1);`                   | Compile-Time Error                   | `result = add(num1, num2);`                  |
+| 21                 | `avg = average(70,80);`                 | Compile-Time Error                   | `avg = average(70,80,90);`                   |
+| 59                 | `calculateGrade(marks);`                | Compile-Time Error                   | Define function prototype and 
+
+| 67                 | `area = circleArea(5);`                 | Compile-Time Error                   | Define `circleArea()` functi
+
+| 73                 | `total = sumArray();`                   | Compile-Time Error                   | Define `sumArray()` function.                |
+| 79                 | `displayResult();`                      | Compile-Time Error                   | Define `displayResult()` fun
+
+| 89                 | `return (a + b + c) / 3;`               | Logical Error                        | `return (a + b + c) / 3.0f;`                 |
+| 95-96              | `if(n == 0) return 0;`                  | Logical Error                        | `if(n == 0) return 1;`                       |
+
+| 111-118            | `swap(int a, int b)`                    | Logical Error                        | Use pointers: `swap(int *a,)
+
+| 124                | `return b;`                             | Logical Error                        | `return a;`                                  |
+| 126                | `return a;`                             | Logical Error                        | `return b;`                                  |
+| 138                | `return fibonacci(n) + fibonacci(n-1);` | Runtime Error (Infinite Recursion)   | `return fibonacci(n-1) + fibo
+
+| 150                | `return marks / total * 100;`           | Logical Error                        | `return (marks * 100) / tota
+
+| 160                | `return;` in float function             | Compile-Time Error                   | `return si;`                                 |
+| 175                | `for(int i=1; i<exp; i++)`              | Logical Error                        | `for(int i=0; i<exp; i++)`                   |
+| 193                | Missing return in `reverseNumber()`     | Compile-Time Warning / Logical Error | Add `return rev;`                            |
+| 215                | `return 1;` when divisible              | Logical Error                        | `return 0;`                                  |
+| 218                | `return 0;` for prime                   | Logical Error                        | `return 1;`                                  |
+| 241                | `for(int i=0; i<=size; i++)`            | Runtime Error (Array Out of Bounds)  | `for(int i=0; i<size; i++)`                  |
+| 249                | `return recursiveDemo(n+1);`            | Runtime Error (Stack Overflow)       | Add base condition                           |
+| 260                | `return length + width;`                | Logical Error                        | `return length * width;`                     |
+| 270                | `return n * n;`                         | Logical Error                        | `return n * n * n;`                          |___________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+*****CORRECT PROGRAM: 
+
+
+#include <stdio.h>
+
+int add(int a, int b);
+
+float average(int a, int b, int c);
+
+int factorial(int n);
+
+void swap(int *a, int *b);
+
+int maximum(int a, int b);
+
+int fibonacci(int n);
+
+void calculateGrade(int marks);
+
+int circleArea(int r);
+
+int sumArray();
+
+void displayResult();
+
+int main()
+{
+    int num1 = 10;
+    int num2 = 20;
+
+    int result = add(num1, num2);
+   
+    printf("Sum = %d\n", result);
+
+    float avg = average(70, 80, 90);
+   
+    printf("Average = %.2f\n", avg);
+
+    int fact = factorial(5);
+    printf("Factorial = %d\n", fact);
+
+    printf("\n");
+
+    int x = 100;
+    int y = 200;
+
+    printf("Before Swap\n");
+    printf("%d %d\n", x, y);
+
+    swap(&x, &y);
+
+    printf("After Swap\n");
+    printf("%d %d\n", x, y);
+
+    printf("\n");
+
+    int max = maximum(15, 25);
+    printf("Maximum = %d\n", max);
+
+    printf("\n");
+
+    int fib = fibonacci(10);
+    printf("Fibonacci = %d\n", fib);
+
+    printf("\n");
+
+    int marks = 90;
+    calculateGrade(marks);
+
+    printf("\n\n");
+
+    int area = circleArea(5);
+    printf("Circle Area = %d\n", area);
+
+    printf("\n");
+
+    int total = sumArray();
+    printf("Sum of Array = %d\n", total);
+
+    printf("\n");
+
+    displayResult();
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+float average(int a, int b, int c)
+{
+    return (a + b + c) / 3.0f;
+}
+
+int factorial(int n)
+{
+    if(n == 0 || n == 1)
+        return 1;
+
+    return n * factorial(n - 1);
+}
+
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int maximum(int a, int b)
+{
+    if(a > b)
+        return a;
+    else
+        return b;
+}
+
+int fibonacci(int n)
+{
+    if(n == 0)
+        return 0;
+
+    if(n == 1)
+        return 1;
+
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+void calculateGrade(int marks)
+{
+    if(marks >= 90)
+        printf("Grade A");
+    else if(marks >= 80)
+        printf("Grade B");
+    else
+        printf("Grade C");
+}
+
+int circleArea(int r)
+{
+    return (int)(3.14 * r * r);
+}
+
+int sumArray()
+{
+    int arr[] = {1, 2, 3, 4, 5};
+    int sum = 0;
+
+    for(int i = 0; i < 5; i++)
+    {
+        sum += arr[i];
+    }
+
+    return sum;
+}
+
+void displayResult()
+{
+    printf("Result Displayed\n");
+}
+
+void printMessage()
+{
+    printf("Welcome\n");
+}
+
+int calculatePercentage(int marks, int total)
+{
+    return (marks * 100) / total;
+}
+
+float simpleInterest(float p, float r, float t)
+{
+    return (p * r * t) / 100;
+}
+
+void displayMenu()
+{
+    printf("1. Add\n");
+    printf("2. Subtract\n");
+    printf("3. Exit\n");
+}
+
+int power(int base, int exp)
+{
+    int result = 1;
+
+    for(int i = 0; i < exp; i++)
+    {
+        result *= base;
+    }
+
+    return result;
+}
+
+int reverseNumber(int n)
+{
+    int rev = 0;
+
+    while(n > 0)
+    {
+        rev = rev * 10 + n % 10;
+        n /= 10;
+    }
+
+    return rev;
+}
+
+int countDigits(int n)
+{
+    int count = 0;
+
+    while(n > 0)
+    {
+        count++;
+        n /= 10;
+    }
+
+    return count;
+}
+
+int isPrime(int n)
+{
+    if(n <= 1)
+        return 0;
+
+    for(int i = 2; i <= n / 2; i++)
+    {
+        if(n % i == 0)
+            return 0;
+    }
+
+    return 1;
+}
+
+void updateValue(int *x)
+{
+    *x = 500;
+}
+
+int findMinimum(int a, int b)
+{
+    return (a < b) ? a : b;
+}
+
+void printArray(int arr[], int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+}
+
+void greet()
+{
+    printf("Hello Students\n");
+}
+
+float rectangleArea(float length, float width)
+{
+    return length * width;
+}
+
+int square(int n)
+{
+    return n * n;
+}
+
+int cube(int n)
+{
+    return n * n * n;
+}
+
+
+
+***OUTPUT:
+
+
+
+
+Sum = 30
+Average = 80.00
+Factorial = 120
+
+Before Swap
+100 200
+After Swap
+200 100
+
+Maximum = 25
+
+Fibonacci = 55
+
+Grade A
+
+Circle Area = 78
+
+Sum of Array = 15
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+
+
+
+####  PROBLEM-9:
+=====================
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void swap(int *a, int *b);
+void printArray(int *arr, int size);
+
+int main()
+{
+    int x = 10;
+    int y = 20;
+
+    int *ptr1;
+
+    printf("%d\n", *ptr1);
+
+    int *ptr2 = NULL;
+
+    *ptr2 = 100;
+
+    int *ptr3;
+
+    ptr3 = &x;
+
+    printf("%d\n", *ptr3);
+
+    ptr3++;
+
+    printf("%d\n", *ptr3);
+
+    int arr[5] = {10,20,30,40,50};
+
+    int *ptr4 = arr;
+
+    printf("%d\n", *(ptr4 + 10));
+
+    int *ptr5;
+
+    ptr5 = malloc(sizeof(int));
+
+    *ptr5 = 500;
+
+    printf("%d\n", *ptr5);
+
+    free(ptr5);
+
+    printf("%d\n", *ptr5);
+
+    int *ptr6;
+
+    ptr6 = malloc(sizeof(int));
+
+    *ptr6 = 1000;
+
+    ptr6 = NULL;
+
+    int *ptr7;
+
+    ptr7 = malloc(5);
+
+    for(int i=0; i<10; i++)
+    {
+        ptr7[i] = i;
+    }
+
+    free(ptr7);
+
+    int *ptr8;
+
+    ptr8 = malloc(3 * sizeof(int));
+
+    ptr8[0] = 10;
+    ptr8[1] = 20;
+    ptr8[2] = 30;
+    ptr8[3] = 40;
+
+    free(ptr8);
+
+    int *ptr9;
+
+    ptr9 = malloc(sizeof(int));
+
+    *ptr9 = 50;
+
+    free(ptr9);
+
+    free(ptr9);
+
+    int *ptr10;
+
+    ptr10 = malloc(sizeof(int));
+
+    printf("%d\n", *ptr10);
+
+    int *numbers;
+
+    numbers = malloc(5 * sizeof(int));
+
+    for(int i=0; i<=5; i++)
+    {
+        numbers[i] = i * 10;
+    }
+
+    printArray(numbers,5);
+
+    int a = 100;
+    int b = 200;
+
+    swap(&a,&b);
+
+    printf("%d %d\n", a, b);
+
+    int **pptr;
+
+    int value = 500;
+
+    pptr = &value;
+
+    printf("%d\n", **pptr);
+
+    char *name;
+
+    name = malloc(5);
+
+    strcpy(name,"Programming");
+
+    printf("%s\n", name);
+
+    int *ptr11;
+
+    ptr11 = malloc(sizeof(int));
+
+    *ptr11 = 123;
+
+    ptr11++;
+
+    printf("%d\n", *ptr11);
+
+    int *ptr12 = NULL;
+
+    if(*ptr12 > 0)
+    {
+        printf("Positive\n");
+    }
+
+    int *ptr13;
+
+    ptr13 = malloc(100 * sizeof(int));
+
+    for(int i=0;i<100;i++)
+    {
+        ptr13[i] = i;
+    }
+
+    ptr13[100] = 500;
+
+    int *ptr14;
+
+    ptr14 = malloc(sizeof(int));
+
+    free(ptr14);
+
+    *ptr14 = 999;
+
+    int matrix[3][3];
+
+    int *p;
+
+    p = matrix;
+
+    printf("%d\n", *(p + 20));
+
+    int *ptr15;
+
+    ptr15 = malloc(sizeof(int));
+
+    ptr15 = malloc(sizeof(int));
+
+    printf("End of Program\n");
+
+    return 0;
+}
+
+void swap(int *a, int *b)
+{
+    int *temp;
+
+    temp = a;
+    a = b;
+    b = temp;
+}
+
+void printArray(int *arr, int size)
+{
+    for(int i=0; i<=size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    printf("\n");
+}
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+****LINEWISE ERROR AND CORRECTION:
+___________________________________________________________________________________________________________________________________
+| Line No. (Approx.) | Code                                        | Type of Error                             | Correction                                                                          |
+| ------------------ | ------------------------------------------- | ----------------------------------------- | ------------
+
+| 13                 | `printf("%d\n", *ptr1);`                    | Runtime Error (Uninitialized Pointer)     | Initialize pointer b
+
+| 17                 | `*ptr2 = 100;`                              | Runtime Error (NULL Pointer Dereference)  | Allocate memory or 
+
+| 25                 | `ptr3++; printf("%d\n", *ptr3);`            | Runtime Error / Undefined Behavior        | Do not incr                           |
+
+| 31                 | `printf("%d\n", *(ptr4 + 10));`             | Runtime Error (Array Out of Bounds)       | Access only indices 
+
+| 43                 | `printf("%d\n", *ptr5);` after `free(ptr5)` | Runtime Error (Use After Free)            | Do not access memory 
+
+| 49                 | `ptr6 = NULL;`                              | Logical Error (Memory Leak)               | Call `free(ptr6);` 
+
+| 55-60              | `ptr7 = malloc(5); for(i=0;i<10;i++)`       | Runtime Error (Buffer Overflow)           | Allocate enough mem  
+
+| 70                 | `ptr8[3] = 40;`                             | Runtime Error (Array Out of Bounds)       | Allocate 4 integers 
+
+| 82                 | `free(ptr9); free(ptr9);`                   | Runtime Error (Double Free)               | Free memory only onc                                                              |
+| 88                 | `printf("%d\n", *ptr10);`                   | Runtime Error (Uninitialized Memory Read) | Assign a value befo
+
+| 94                 | `for(int i=0; i<=5; i++)`                   | Runtime Error (Array Out of Bounds)       | Use `i < 5`.                                                                        |
+| 108                | `pptr = &value;`                            | Compile-Time Error (Type Mismatch)        | Use `int *pt
+
+| 110                | `printf("%d\n", **pptr);`                   | Compile-Time Error                        | Fix double-pointer a
+
+| 116                | `strcpy(name,"Programming");`               | Runtime Error (Buffer Overflow)           | Allocate enough mem
+
+| 128                | `ptr11++; printf("%d\n", *ptr11);`          | Runtime Error                             | Accessing memory be                                          |
+| 134                | `if(*ptr12 > 0)`                            | Runtime Error (NULL Pointer Dereference)  | Check pointer is not 
+
+| 146                | `ptr13[100] = 500;`                         | Runtime Error (Array Out of Bounds)       | Last valid index is 
+
+| 154                | `*ptr14 = 999;` after `free(ptr14)`         | Runtime Error (Use After Free)            | Do not access memory 
+
+| 160                | `p = matrix;`                               | Warning / Type Issue                      | Use `p = &matrix[0][
+
+| 162                | `printf("%d\n", *(p + 20));`                | Runtime Error (Out of Bounds)             | Access within matrix 
+
+| 168                | `ptr15 = malloc(...); ptr15 = malloc(...);` | Logical Error (Memory Leak)               | Free first allocat
+
+| 177                | `for(int i=0; i<=size; i++)`                | Runtime Error (Array Out of Bounds)       | Use `i < size`.                                                                     |
+| 171-176            | `swap()` implementation                     | Logical Error                             | Swap values using `*
+|____________________________________________________________________________________________________________________________________
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+****CORRECT PROGRAM:
+
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <string.h>
+
+void swap(int *a, int *b);
+
+void printArray(int *arr, int size);
+
+int main()
+{
+    int x = 10;
+    int y = 20;
+
+    int value1 = 50;
+    int *ptr1 = &value1;
+    printf("%d\n", *ptr1);
+
+    int value2 = 100;
+    int *ptr2 = &value2;
+    printf("%d\n", *ptr2);
+
+    int *ptr3 = &x;
+    printf("%d\n", *ptr3);
+
+    int arr[5] = {10,20,30,40,50};
+    int *ptr4 = arr;
+    printf("%d\n", *(ptr4 + 2));
+
+    int *ptr5 = malloc(sizeof(int));
+    *ptr5 = 500;
+    printf("%d\n", *ptr5);
+    free(ptr5);
+
+    int *ptr6 = malloc(sizeof(int));
+    *ptr6 = 1000;
+    printf("%d\n", *ptr6);
+    free(ptr6);
+
+    int *ptr7 = malloc(10 * sizeof(int));
+    for(int i=0; i<10; i++)
+    {
+        ptr7[i] = i;
+    }
+
+    for(int i=0; i<10; i++)
+    {
+        printf("%d ", ptr7[i]);
+    }
+    printf("\n");
+    free(ptr7);
+
+    int *ptr8 = malloc(4 * sizeof(int));
+    ptr8[0] = 10;
+    ptr8[1] = 20;
+    ptr8[2] = 30;
+    ptr8[3] = 40;
+
+    for(int i=0; i<4; i++)
+    {
+        printf("%d ", ptr8[i]);
+    }
+    printf("\n");
+    free(ptr8);
+
+    int *ptr9 = malloc(sizeof(int));
+    *ptr9 = 50;
+    printf("%d\n", *ptr9);
+    free(ptr9);
+
+    int *ptr10 = malloc(sizeof(int));
+    *ptr10 = 200;
+    printf("%d\n", *ptr10);
+    free(ptr10);
+
+    int *numbers = malloc(5 * sizeof(int));
+
+    for(int i=0; i<5; i++)
+    {
+        numbers[i] = i * 10;
+    }
+
+    printArray(numbers,5);
+    free(numbers);
+
+    int a = 100;
+    int b = 200;
+
+    swap(&a,&b);
+
+    printf("%d %d\n", a, b);
+
+    int value = 500;
+    int *ptr = &value;
+    int **pptr = &ptr;
+
+    printf("%d\n", **pptr);
+
+    char *name = malloc(20);
+    strcpy(name,"Programming");
+    printf("%s\n", name);
+    free(name);
+
+    int *ptr11 = malloc(sizeof(int));
+    *ptr11 = 123;
+    printf("%d\n", *ptr11);
+    free(ptr11);
+
+    int *ptr13 = malloc(100 * sizeof(int));
+
+    for(int i=0;i<100;i++)
+    {
+        ptr13[i] = i;
+    }
+
+    printf("%d\n", ptr13[99]);
+    free(ptr13);
+
+    int matrix[3][3] =
+    {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+
+    int *p = &matrix[0][0];
+
+    printf("%d\n", *(p + 4));
+
+    int *ptr15 = malloc(sizeof(int));
+    *ptr15 = 999;
+    printf("%d\n", *ptr15);
+    free(ptr15);
+
+    printf("End of Program\n");
+
+    return 0;
+}
+
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void printArray(int *arr, int size)
+{
+    for(int i=0; i<size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+
+
+
+
+****OUTPUT:
+
+
+50
+100
+10
+30
+500
+1000
+0 1 2 3 4 5 6 7 8 9
+10 20 30 40
+50
+200
+0 10 20 30 40
+200 100
+500
+Programming
+123
+99
+5
+999
+_______
+
+
+_______________________________________________________________________________________________________________________________
+
+
+
+
+###PROBLEM-10:
+=================
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int add(int a, int b);
+float average(int a, int b, int c);
+void displayReport();
+
+extern int totalStudents;
+
+int main()
+{
+    int choice = 1
+
+    int marks = "90";
+
+    int a = 10;
+    int b = 20;
+
+    int result;
+
+    result = add(a);
+
+    printf("Sum = %d\n", result);
+
+    if(a = b)
+    {
+        printf("Equal\n");
+    }
+
+    printf("%d\n", score);
+
+    int arr[5];
+
+    arr[10] = 100;
+
+    printf("%d\n", arr[-1]);
+
+    char name[10];
+
+    strcpy(name, "ProgrammingLanguage");
+
+    printf("%s\n", name);
+
+    char city[20] = "Jaipur";
+
+    city = "Delhi";
+
+    printf("%s\n", city);
+
+    char user[20];
+
+    scanf("%s", user);
+
+    if(user == "admin")
+    {
+        printf("Valid User\n");
+    }
+
+    int x = 100;
+    int y = 0;
+
+    printf("%d\n", x/y);
+
+    int *ptr1 = NULL;
+
+    *ptr1 = 500;
+
+    int *ptr2;
+
+    printf("%d\n", *ptr2);
+
+    int *ptr3;
+
+    ptr3 = malloc(sizeof(int));
+
+    *ptr3 = 100;
+
+    free(ptr3);
+
+    printf("%d\n", *ptr3);
+
+    free(ptr3);
+
+    int *ptr4;
+
+    ptr4 = malloc(5);
+
+    for(int i=0;i<10;i++)
+    {
+        ptr4[i] = i;
+    }
+
+    int *ptr5;
+
+    ptr5 = malloc(sizeof(int));
+
+    ptr5 = malloc(sizeof(int));
+
+    float avg;
+
+    avg = average(70,80);
+
+    printf("%f\n", avg);
+
+    int age = 17;
+
+    if(age > 18)
+        printf("Not Eligible\n");
+    else
+        printf("Eligible\n");
+
+    int num = 13;
+
+    int isPrime = 1;
+
+    for(int i=2;i<num;i++)
+    {
+        if(num%i==0)
+        {
+            isPrime = 1;
+            break;
+        }
+    }
+
+    if(isPrime)
+        printf("Not Prime\n");
+    else
+        printf("Prime\n");
+
+    displayReport();
+
+    calculateSalary();
+
+    printf("%d\n", totalStudents);
+
+    FILE *fp;
+
+    fp = fopen("abc.txt","r");
+
+    fscanf(fp,"%d",&num);
+
+    fclose(fp);
+
+    switch(choice)
+    {
+        case 1
+            printf("One\n");
+            break;
+
+        case 2:
+            printf("Two\n");
+
+        default:
+            printf("Other\n");
+    }
+
+    char grade = 'AB';
+
+    printf("%c\n", grade);
+
+    int scores[3];
+
+    scores[0]=10;
+    scores[1]=20;
+    scores[2]=30;
+    scores[3]=40;
+
+    int total = 0;
+
+    for(int i=0;i<=3;i++)
+    {
+        total += scores[i];
+    }
+
+    printf("%d\n", total);
+
+    int radius = 5;
+
+    float area;
+
+    area = 2 * 3.14 * radius * radius;
+
+    printf("%f\n", area);
+
+    while(choice > 0);
+    {
+        choice--;
+    }
+
+    continue;
+
+    printf("Program Completed\n");
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+float average(int a, int b, int c)
+{
+    return (a+b+c)/3;
+}
+
+int totalStudents = 500;
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+****LINEWISE ERROR AND CORRECTION:
+___________________________________________________________________________________________________________________________________
+| Line No. (Approx.) | Code                                        | Type of Error                            | Correction                                 |
+| ------------------ | ------------------------------------------- | ---------------------------------------- | ----------
+| 11                 | `int choice = 1`                            | Compile-Time Error                       | Add semicolon: `int c
+
+| 13                 | `int marks = "90";`                         | Compile-Time Error (Type Mismatch)       | `int marks = 90;`                          |
+| 19                 | `result = add(a);`                          | Compile-Time Error                       | `result = add(a, b);`                      |
+| 23                 | `if(a = b)`                                 | Logical Error                            | `if(a == b)`                               |
+| 28                 | `printf("%d\n", score);`                    | Compile-Time Error                       | Declare `score` befo
+
+| 32                 | `arr[10] = 100;`                            | Runtime Error (Array Out of Bounds)      | Use index within `0-4
+
+| 34                 | `printf("%d\n", arr[-1]);`                  | Runtime Error                            | Use a valid index                          |
+| 38                 | `strcpy(name,"ProgrammingLanguage");`       | Runtime Error (Buffer Overflow)          | Increase array size, 
+
+| 44                 | `city = "Delhi";`                           | Compile-Time Error                       | `strcpy(city, "De
+
+| 52                 | `if(user == "admin")`                       | Logical Error                            | `if(strcmp(user,")
+
+| 60                 | `printf("%d\n", x/y);`                      | Runtime Error (Division by Zero)         | Ensure `y != 0`                            |
+| 64                 | `*ptr1 = 500;`                              | Runtime Error (NULL Pointer Dereference) | Allocate memory or us
+
+| 68                 | `printf("%d\n", *ptr2);`                    | Runtime Error (Uninitialized Pointer)    | Initialize pointer be
+
+| 78                 | `printf("%d\n", *ptr3);` after `free(ptr3)` | Runtime Error (Use After Free)           | Do not access freed m
+
+| 80                 | `free(ptr3);` again                         | Runtime Error (Double Free)              | Free memory only once                      |
+
+| 86-90              | `ptr4 = malloc(5); for(i<10)`               | Runtime Error (Buffer Overflow)          | Allocate enough memor
+
+| 96-98              | Reassigning `ptr5` without freeing          | Logical Error (Memory Leak)              | `free(ptr5);` before 
+
+| 102                | `avg = average(70,80);`                     | Compile-Time Error                       | `average(70,80,90);`                       |
+| 118                | Prime logic (`isPrime=1`)                   | Logical Error                            | Set `isPrime=0` when 
+
+| 130                | `displayReport();`                          | Linker Error                             | Define `displayRepor
+
+| 132                | `calculateSalary();`                        | Compile-Time Error / Linker Error        | Declare and define fu
+
+| 140                | `fscanf(fp,"%d",&num);`                     | Runtime Error                            | Check `fp != NULL` be
+
+| 147                | `case 1`                                    | Compile-Time Error                       | `case 1:`                                  |
+| 157                | `char grade = 'AB';`                        | Compile-Time Error                       | Use single character:                 |
+| 165                | `scores[3] = 40;`                           | Runtime Error (Array Out of Bounds)      | Declare `scores[4]`                        |
+| 169                | `for(int i=0;i<=3;i++)`                     | Runtime Error                            | Use `i < 4`                                |
+| 179                | `area = 2 * 3.14 * radius * radius;`        | Logical Error                            | `area = 3.14 * radius        |
+| 183                | `while(choice > 0);`                        | Logical Error (Infinite Loop)            | Remove extra semicol
+
+| 188                | `continue;`                                 | Compile-Time Error                       | Remove it or place in
+
+| 199                | `return (a+b+c)/3;`                         | Logical Error                            | `return (a+b+c)/3.0f;
+|_____________________________________________________________________________________________________________________________________
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+******CORRECT  PROGRAM:
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int add(int a, int b);
+float average(int a, int b, int c);
+void displayReport();
+void calculateSalary();
+
+int totalStudents = 500;
+
+int main()
+{
+    int choice = 1;
+    int marks = 90;
+
+    int a = 10;
+    int b = 20;
+
+    int result = add(a, b);
+    printf("Sum = %d\n", result);
+
+    if(a == b)
+        printf("Equal\n");
+    else
+        printf("Not Equal\n");
+
+    int score = 95;
+    printf("%d\n", score);
+
+    int arr[5] = {10,20,30,40,50};
+    printf("%d\n", arr[2]);
+
+    char name[25];
+    strcpy(name, "ProgrammingLanguage");
+    printf("%s\n", name);
+
+    char city[20] = "Jaipur";
+    strcpy(city, "Delhi");
+    printf("%s\n", city);
+
+    char user[20] = "admin";
+
+    if(strcmp(user, "admin") == 0)
+        printf("Valid User\n");
+
+    int x = 100;
+    int y = 10;
+    printf("%d\n", x / y);
+
+    int value = 500;
+    int *ptr1 = &value;
+    printf("%d\n", *ptr1);
+
+    int temp = 200;
+    int *ptr2 = &temp;
+    printf("%d\n", *ptr2);
+
+    int *ptr3 = malloc(sizeof(int));
+    *ptr3 = 100;
+    printf("%d\n", *ptr3);
+    free(ptr3);
+
+    int *ptr4 = malloc(10 * sizeof(int));
+
+    for(int i = 0; i < 10; i++)
+        ptr4[i] = i;
+
+    free(ptr4);
+
+    float avg = average(70,80,90);
+    printf("%.2f\n", avg);
+
+    int age = 17;
+
+    if(age >= 18)
+        printf("Eligible\n");
+    else
+        printf("Not Eligible\n");
+
+    int num = 13;
+    int isPrime = 1;
+
+    for(int i = 2; i < num; i++)
+    {
+        if(num % i == 0)
+        {
+            isPrime = 0;
+            break;
+        }
+    }
+
+    if(isPrime)
+        printf("Prime\n");
+    else
+        printf("Not Prime\n");
+
+    displayReport();
+
+    calculateSalary();
+
+    printf("%d\n", totalStudents);
+
+    FILE *fp = fopen("abc.txt", "r");
+
+    if(fp != NULL)
+    {
+        fscanf(fp, "%d", &num);
+        fclose(fp);
+    }
+
+    switch(choice)
+    {
+        case 1:
+            printf("One\n");
+            break;
+
+        case 2:
+            printf("Two\n");
+            break;
+
+        default:
+            printf("Other\n");
+    }
+
+    char grade = 'A';
+    printf("%c\n", grade);
+
+    int scores[4] = {10,20,30,40};
+
+    int total = 0;
+
+    for(int i = 0; i < 4; i++)
+        total += scores[i];
+
+    printf("%d\n", total);
+
+    int radius = 5;
+    float area = 3.14 * radius * radius;
+
+    printf("%.2f\n", area);
+
+    while(choice > 0)
+    {
+        choice--;
+    }
+
+    printf("Program Completed\n");
+
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+float average(int a, int b, int c)
+{
+    return (a + b + c) / 3.0f;
+}
+
+void displayReport()
+{
+    printf("Report Displayed\n");
+}
+
+void calculateSalary()
+{
+    printf("Salary Calculated\n");
+}
+
+
+
+
+
+*****OUTPUT:
+
+
+
+
+Sum = 30
+
+Not Equal
+
+95
+
+30
+
+ProgrammingLanguage
+
+Delhi
+
+Valid User
+
+10
+
+500
+
+200
+
+100
+
+80.00
+
+Not Eligible
+
+Prime
+
+Report Displayed
+
+Salary Calculated
+
+500
+
+One
+
+A
+
+100
+
+78.50
+
+Program Completed
+
+
+_____________________________________________________________________________________________________________________________________
+
+
+*** END OF ASSIGNMENT-3 ***
