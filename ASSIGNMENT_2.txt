@@ -1,0 +1,1007 @@
+# DAY-2                    CONDITIONAL STATEMENTS
+
+                                    ASSIGNMENT-2
+
+                                     # 50 QUESTIONS WITH ANSWERS
+
+
+Q.1. What is a conditional statement in programming?
+
+ANS :- In programming, a conditional statement is a construct that allows a program to make decisions and execute different code depending on whether a condition is true or false.
+
+If the condition is true, one block of code runs.
+
+
+
+Q.2. What does an if statement do?
+
+Ans: `if` statement lets a program make decisions. It checks whether a condition is *true* or *false*.
+
+--->Here’s what happens:
+
+* `age >= 18` is the condition
+
+* If the condition is `True`, the code inside runs
+
+* If it’s `False`, the code is skipped
+
+* make choices
+
+* react to user input
+
+* control what happens next
+
+
+--->Examples:
+
+* Login systems
+
+* Games
+
+* Apps checking passwords
+
+* Weather apps giving alert
+
+
+
+Q.3 what is the purpose of an else block?
+
+ANS: The `else` block provides an alternative action when the `if` condition is **false**.Without `else`, nothing happens when the condition is false.
+
+--->Think of it as a fork in the road:
+
+* If the condition is true → take one path.
+
+* Otherwise (`else`) → take the other path.
+
+
+
+Q.4 what is an else block executed?
+
+ANS: In **C++**, the `else` block executes when the condition in the `if` statement is **false**.
+
+---> Example:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number = 5;
+
+    if (number > 10) {
+        cout << "Number is greater than 10";
+    }
+ else {
+        cout << "Number is 10 or less";
+    }
+
+    return 0;
+}
+`
+
+# Output:
+
+```
+Number is 10 or less
+```
+
+--->Explanation:
+
+* The condition `number > 10` is checked.
+
+* Since `5 > 10` is **false**, the `else` block is executed.
+
+* Therefore, `"Number is 10 or less"` is printed.
+
+
+
+Q.5 What is a Boolean Expression?
+
+ANS: A Boolean expression is an expression that evaluates to either **true** or **false**.
+
+--->Program:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int a = 10;
+int b = 5;
+
+
+if (a > b)
+{
+    cout << "The expression (a > b) is True";
+}
+else
+{
+    cout << "The expression (a > b) is False";
+}
+
+return 0;
+
+
+}
+
+--->Output:
+
+The expression (a > b) is True
+
+-->A Boolean expression is an expression that produces either **true** or **false** as its result. For example, `a > b`, `x == y`, and `num != 0` are Boolean expressions.
+
+
+
+Q.6 Write the syntax of a simple if statement (C++)
+
+ANS: --->Syntax:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+if (condition)
+{
+// statements to execute if condition is true
+}
+
+return 0;
+
+}
+
+
+
+Q.7 What operator is used to test equality?
+
+ANS: The equality operator used in C++ is:==
+
+--->Example:
+if (a == b)
+
+It checks whether two values are equal.
+
+
+
+Q.8 What does the modulus operator return?
+
+ANS: The modulus operator (%) returns the remainder after division.
+
+--->Example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int a = 10;
+int b = 3;
+
+cout << (a % b);
+
+return 0;
+
+}
+
+--->Output:
+1
+
+(Because 10 ÷ 3 leaves remainder 1)
+
+
+
+Q.9 How can you check if a number is even?
+
+ANS: A number is even if it is divisible by 2 (remainder is 0).
+
+-->Condition:
+
+number % 2 == 0
+
+-->Example program:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int number = 8;
+
+if (number % 2 == 0)
+{
+    cout << "Even number";
+}
+
+return 0;
+
+}
+
+
+
+Q.10 How can you check if a number is odd?
+
+ANS: A number is odd if it is not divisible by 2 (remainder is not 0).
+
+-->Condition:
+
+number % 2 != 0
+
+
+-->Example program:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int number = 7;
+
+if (number % 2 != 0)
+{
+    cout << "Odd number";
+}
+
+return 0;
+
+}
+
+
+
+
+Q.11 What is the purpose of else-if?
+
+ANS: The **else-if ladder** is used to check **multiple conditions** one by one. It allows selection of one block of code among many alternatives.
+
+-->Example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int marks = 75;
+
+```
+if (marks >= 90)
+    cout << "A grade";
+else if (marks >= 75)
+    cout << "B grade";
+else
+    cout << "C grade";
+
+return 0;
+
+
+}
+
+
+
+
+Q.12 What is a nested if statement?
+
+ANS: A **nested if statement** is an if statement written inside another if statement.
+
+--->Example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int age = 20;
+
+
+if (age >= 18)
+{
+    if (age >= 60)
+        cout << "Senior citizen";
+    else
+        cout << "Adult";
+}
+
+return 0;
+
+
+}
+
+
+
+
+Q.13 Can an if statement exist without an else?
+
+ANS: Yes, an **if statement can exist without an else**.THERE are many program which is based on only if statement.
+    
+     * if is a type of control statements
+
+
+
+
+Q.14 What is the output when a false condition is tested in an if statement without else?
+
+ANS: If the condition is **false** and there is **no else block**, 
+
+    -->then nothing is executed
+
+    -->(no output is produced from that if statement).
+
+
+
+
+ Q.15 What is the role of braces {} in C/C++ conditionals?
+
+ANS: Braces `{}` are used to group **multiple statements** inside an if, else, or loop so they execute together as a single block.
+
+     --> It is used to write block of code in any program.
+
+
+
+ Q.16 What does > mean?
+
+ANS: `>` means **greater than**.
+
+-->It checks if the left value is larger than the right value.
+
+--> It is an relational operator which is used to show relations between two operators.
+
+--->Example: 5 > 3 → true
+
+
+
+Q.17 What does < mean?
+
+ANS: `<` means **less than**.
+
+  -->It checks if the left value is smaller than the right value.
+
+  -->It is a relational operator.
+
+  --->Example: 3 < 5 → true
+
+
+
+
+Q.18 What does >= mean?
+
+ANS: `>=` means **greater than or equal to**.
+
+  -->It checks if the left value is greater or equal to the right value.
+
+  -->It is a relational operator.
+
+ --->Example: 5 >= 5 → true
+
+
+
+
+ Q.19 What does <= mean?
+
+ANS: `<=` means **less than or equal to**.
+
+  -->It checks if the left value is less or equal to the right value.
+
+  -->It is a relational operator.
+
+  -->Example: 3 <= 5 → true
+
+
+
+
+Q.20 What does != mean?
+
+ANS: `!=` means **not equal to**.
+
+ -->It checks if two values are different.
+ 
+ --> It is a relational operator.
+
+
+ -->Example: 5 != 3 → true
+
+
+
+
+Q.21 What is a switch statement?
+
+ANS: A **switch statement** is a control statement used to execute one block of code among many based on the value of a variable.
+
+--->Example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int day = 2;
+
+
+switch(day)
+{
+    case 1:
+        cout << "Monday";
+        break;
+    case 2:
+        cout << "Tuesday";
+        break;
+    default:
+        cout << "Invalid day";
+}
+
+return 0;
+
+
+}
+
+
+
+Q.22 What is a case label in a switch statement?
+
+ANS: A **case label** is a constant value used inside a switch to compare with the expression.
+
+ --> For Example:
+                 case 1:
+                 case 2:
+
+-->Each case represents a possible match.It represents the switch possible case or match. 
+
+
+
+
+Q.23 Why is break used in switch?
+
+ANS: The **break statement** is used to stop execution of the switch after a matching case is found.
+
+    --->It is used to break the statement.
+    
+    --->When the statement over it is applied.
+
+
+
+Q.24 What happens if break is omitted?
+
+ANS: If **break is omitted**, execution continues into the next cases (this is called **fall-through**).
+
+
+
+Q.25 What is the default case in switch?
+
+ANS: The **default case** runs when none of the case labels match the switch expression.
+
+  --->Example:
+
+default:
+cout << "Invalid input";
+
+
+
+Q.26 Can switch compare strings in C++?
+
+ANS: No, the traditional **switch statement cannot directly compare strings** in C++. It works only with int, char, and enum types.
+
+
+ Q.27 Which statement is better for many constant choices: if-else or switch?
+
+ANS: For many fixed constant values, **switch statement is better** because it is clearer and faster than multiple if-else statements.
+
+    ---> It is better to used it.
+
+
+ Q.28 How do you test whether a value is positive?
+
+ANS: A number is positive if it is greater than zero:
+
+number > 0
+
+Example:
+if (number > 0)
+cout << "Positive";
+
+
+
+Q.29 How do you test whether a value is negative?
+
+ANS: A number is negative if it is less than zero:
+
+number < 0
+
+Example:
+
+if (number < 0)
+cout << "Negative";
+
+
+
+
+Q.30 How do you test whether a value is zero?
+
+ANS: A number is zero if it is equal to zero:
+
+number == 0
+
+Example:
+
+if (number == 0)
+
+cout << "Zero";
+
+
+
+
+Q.31 Write a condition to check if age is at least 18.
+
+ANS: age >= 18
+
+Example:
+
+if (age >= 18)
+
+
+
+Q.32 Write a condition to check if marks are above 50.
+
+ANS: marks > 50
+
+Example:
+
+if (marks > 50)
+
+
+
+Q.33 What is decision making in programming?
+
+ANS: Decision making in programming is the process of executing different code blocks based on conditions using statements like if, else, and switch.
+
+  --> It is make based on the condition given.
+
+  ---> It is very important in the programming.
+
+
+
+
+Q.34 Can nested if statement have multiple levels?
+
+ANS: Yes, a nested if statement can have multiple levels (an if inside an if inside another if, and so on).
+
+  --> It can have many multiple levels.
+
+  --> But can create complexity.
+
+
+
+
+Q.35 What is logical AND (&&)?
+
+ANS: The logical AND (&&) operator returns true only when both conditions are true.
+
+Example:
+
+if (a > 0 && b > 0)
+
+
+
+
+Q.36 What is logical OR (||)?
+
+ANS: The logical OR (||) operator returns true if at least one condition is true.
+
+Example:
+
+if (a > 0 || b > 0)
+
+--> It uses as or statement.
+
+
+
+
+Q.37 What is logical NOT (!) ?
+
+ANS: The logical NOT (!) operator reverses the condition (true becomes false, false becomes true).
+
+Example:
+
+if (!(a > 0))
+
+---> This operator give Boolean answer.
+
+--->It give answer in true or false.
+
+
+
+
+Q.38 How do you check if a year is divisible by 4?
+
+ANS: year % 4 == 0
+
+Example:
+
+if (year % 4 == 0)
+
+--> If remainder is zero then it is divisible by 4.
+
+
+
+
+Q.39 What is a leap year?
+
+ANS:  A leap year is a year that has 366 days instead of 365 days, with an extra day in February.
+
+    ---> Has 29 days in February.
+
+
+
+
+Q.40 What is the first condition for a leap year?
+
+ANS: The first condition for a leap year is:
+
+ -->The year must be divisible by 4.
+
+ -->Example condition:
+
+{
+year % 4 == 0
+
+}
+
+
+
+
+
+Q.41 How do you find the largest of two numbers?
+
+ANS: ---> Problem Statement:
+
+                           Write a program to find the largest among two numbers.
+
+  
+----> Algorithm:
+
+
+1. Start
+2. Input two numbers a and b
+3. Compare a and b
+4. If a > b print a is largest
+5. Else print b is largest
+6. Stop
+
+ ---> Program:
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int a = 10, b = 20;
+
+
+if (a > b)
+    cout << "A is largest";
+else
+    cout << "B is largest";
+
+return 0;
+
+
+}
+
+
+  ---> Dry Run:
+
+a = 10, b = 20
+
+10 > 20 → False
+
+So else runs → B is largest
+
+
+--->Output:
+
+B is largest
+
+
+---> Explanation:
+
+Program compares two values using if-else and prints the larger one.
+
+
+
+
+
+
+ Q.42 How do you find the largest of three numbers?
+
+ANS: ---> Problem Statement:
+
+Find the largest among three numbers.
+
+
+---> Algorithm:
+
+1. Start
+2. Input a, b, c
+3. Compare a with b and c
+4. If a is greatest print a
+5. Else check b and c
+6. Print largest
+7. Stop
+
+
+---> Program:
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int a = 10, b = 25, c = 15;
+
+
+if (a > b && a > c)
+    cout << "A is largest";
+else if (b > a && b > c)
+    cout << "B is largest";
+else
+    cout << "C is largest";
+
+return 0;
+
+
+}
+
+
+--->Dry Run:
+
+
+a=10, b=25, c=15
+
+a largest? No
+
+b largest? Yes
+
+
+--->Output:
+
+B is largest
+
+
+--->Explanation:
+
+
+
+Logical AND (&&) is used to compare all numbers.
+
+
+
+
+
+Q.43 What is an if-else-if ladder?
+
+ANS: An **if-else-if ladder** is used when multiple conditions are checked one by one.
+
+---> Program:
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int marks = 75;
+
+```
+if (marks >= 90)
+    cout << "A";
+else if (marks >= 75)
+    cout << "B";
+else
+    cout << "C";
+
+return 0;
+```
+
+}
+
+
+--->Output:
+
+B
+
+
+--->Explanation:
+
+
+Conditions are checked top to bottom until one is true.
+
+
+
+
+
+Q.44 Difference between if and switch
+
+ANS: Difference is :
+
+* if works with **ranges and complex conditions**
+
+* switch works with **fixed values only**
+
+* if uses relational operators
+
+* switch uses case labels
+
+
+---> Example:
+
+if (a > b) → range
+
+switch(a) → fixed values
+
+
+
+
+
+Q.45 Can switch use ranges directly?
+
+ANS: No, switch cannot use ranges like:
+case 1 to 10 -->no
+
+It only supports constant values:
+
+case 1, case 2 -->yes
+
+
+
+
+
+Q.46 What is fall-through in switch?
+
+ANS: If break is not used, execution continues into next cases.
+
+--->Program:
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int n = 1;
+
+
+switch(n)
+{
+    case 1:
+        cout << "One ";
+    case 2:
+        cout << "Two ";
+    case 3:
+        cout << "Three ";
+}
+
+return 0;
+
+
+}
+
+
+---> Output:
+
+One Two Three
+
+
+--->Explanation:
+
+
+Because break is missing, all cases execute.
+
+
+
+
+ Q.47 What data type is usually used for conditions?
+
+ANS: The **bool (Boolean)** data type is used for conditions.
+
+--->Example:
+
+bool isTrue = (5 > 3);
+
+
+--->Output:
+
+true (1)
+
+
+
+
+ Q.48 Why are conditional statements important?
+
+ANS: Conditional statements allow decision-making in programs. They help programs behave differently based on input.
+
+--->Example:
+
+Login system → correct password → access granted
+
+It is very important.
+
+It provides the conditions.
+
+It describes when to do work.
+
+
+
+
+ Q.49 Real-life example of conditional statement
+
+ANS: If it is raining → take umbrella
+
+     Else → no umbrella
+
+
+---> Program:
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int rain = 1;
+
+
+if (rain == 1)
+    cout << "Take umbrella";
+else
+    cout << "No umbrella";
+
+return 0;
+
+
+}
+
+
+--->Output:
+
+
+Take umbrella
+
+
+
+
+
+Q.50 Name four conditional structures covered.
+
+ANS: Following are the name of conditional statements:
+
+1. if statement : * USED when we want to execute a block of code only if a condition is true.
+                  
+                  * FOR EXAMPLE: Check if a no. is positive.
+
+
+2. if-else statement :  * Used when there are two possible outcomes.
+
+                        *FOR EXAMPLE: I(f a no. is positive or negative.
+
+
+3. if-else-if ladder : * Used when multiple conditions are need to check.
+
+                       *EXAMPLE: assign grades.
+
+
+4. switch statement : * Used when to select one option from many cases based on variables value.
+
+                      * FOR EXAMPLE: Display the day of the week on number.
+
+
+
+_______________________________________________________________________________________________________________________________________________________________________-
+
+END OF ASSIGNMENT 2 *
+
+
+
+
+
+
+
+
+
