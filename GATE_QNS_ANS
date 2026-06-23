@@ -1,0 +1,771 @@
+
+                        # 15 GATE-Level Questions (C Programming) with Answers
+
+
+******FUNCTION:
+
+
+
+
+
+### Q1. What is the output?
+
+```c
+#include <stdio.h>
+void fun() {
+    static int x = 0;
+    x++;
+    printf("%d ", x);
+}
+int main() {
+    fun();
+    fun();
+    fun();
+}
+```
+
+**Answer:** `1 2 3`
+
+---
+
+ Q2. What is the output?
+
+```c
+#include <stdio.h>
+void fun(int x) {
+    x = x + 5;
+}
+int main() {
+    int a = 10;
+    fun(a);
+    printf("%d", a);
+}
+```
+
+**Answer:** `10`
+          
+---
+
+Q3. What is the output?
+
+```c
+#include <stdio.h>
+void fun(int *x) {
+    *x = *x + 5;
+}
+int main() {
+    int a = 10;
+    fun(&a);
+    printf("%d", a);
+}
+```
+
+**Answer:** `15`
+
+---
+
+Q4. What is the output?
+
+```c
+#include <stdio.h>
+int fun(int n) {
+    if(n == 0)
+        return 0;
+    return n + fun(n - 1);
+}
+int main() {
+    printf("%d", fun(4));
+}
+```
+
+**Answer:** `10`
+
+---
+
+Q5. What is the output?
+
+```c
+#include <stdio.h>
+int fun(int n) {
+    if(n <= 1)
+        return 1;
+    return n * fun(n - 1);
+}
+int main() {
+    printf("%d", fun(5));
+}
+```
+
+**Answer:** `120`
+
+---
+
+Q6. How many times is `fun()` called?
+
+```c
+void fun(int n) {
+    if(n > 0)
+        fun(n - 1);
+}
+```
+
+For `fun(3)`.
+
+**Answer:** `4 times`
+
+---
+ Q7. What is the output?
+
+```c
+#include <stdio.h>
+int fun(int x) {
+    return x * x;
+}
+int main() {
+    printf("%d", fun(fun(2)));
+}
+```
+
+**Answer:** `16`
+
+---
+
+ Q8. What is the output?
+
+```c
+#include <stdio.h>
+int fun(int a, int b) {
+    return a + b;
+}
+int main() {
+    printf("%d", fun(8, 12));
+}
+```
+
+**Answer:** `20`
+
+---
+
+Q9. What is the output?
+
+```c
+#include <stdio.h>
+int fun(int n) {
+    if(n == 0)
+        return 1;
+    return 2 * fun(n - 1);
+}
+int main() {
+    printf("%d", fun(3));
+}
+```
+
+**Answer:** `8`
+
+---
+
+Q10. What is the output?
+
+```c
+#include <stdio.h>
+int fun() {
+    return 5;
+}
+int main() {
+    printf("%d", fun() + fun());
+}
+```
+
+**Answer:** `10`
+
+---
+
+Q11. What is the output?
+
+```c
+#include <stdio.h>
+void fun(int arr[]) {
+    arr[0] = 100;
+}
+int main() {
+    int a[] = {10,20}
+    fun(a);
+    printf("%d", a[0]);
+}
+```
+
+**Answer:** `100`
+
+---
+
+Q12. What is the output?
+
+```c
+#include <stdio.h>
+int fun(int x) {
+    return ++x;
+}
+int main() {
+    int a = 5;
+    printf("%d", fun(a));
+}
+```
+
+**Answer:** `6`
+
+---
+
+Q13. What is the output?
+
+```c
+#include <stdio.h>
+void fun(int x) {
+    printf("%d ", x);
+}
+int main() {
+    fun(3);
+    fun(4);
+}
+```
+
+**Answer:** `3 4`
+
+---
+
+Q14. What is the value of `fun(5)`?
+
+```c
+int fun(int n) {
+    if(n == 1)
+        return 1;
+    return n + fun(n - 1);
+}
+```
+
+**Answer:** `15`
+
+---
+
+### Q15. What is the output?
+
+```c
+#include <stdio.h>
+int fun(int n) {
+    if(n == 1)
+        return 1;
+    return n * fun(n - 1);
+}
+int main() {
+    printf("%d", fun(4));
+}
+```
+
+**Answer:** `24`
+
+
+
+*****Function Call Question
+
+
+
+**Q1.** What is the output?
+
+```c
+#include <stdio.h>
+
+void fun(int x) {
+
+
+    x = x + 10;
+}
+
+int main() {
+    int a = 5;
+    fun(a);
+    printf("%d", a);
+    return 0;
+}
+```
+
+**Answer:** `5`
+
+---
+
+**Q2.** What is the output?
+
+
+```c
+#include <stdio.h>
+
+void fun(int *x) {
+    *x = *x + 10;
+}
+
+int main() {
+    int a = 5;
+    fun(&a);
+    printf("%d", a);
+    return 0;
+}
+```
+
+**Answer:** `15`
+
+---
+
+
+**Q3.** How many times is `fun()` called?
+
+```c
+void fun(int n) {
+    if(n > 0)
+        fun(n - 1);
+}
+```
+
+For `fun(4)`.
+
+**Answer:** `5 times`
+
+---
+
+**Q4.** What is the output?
+
+```c
+#include <stdio.h>
+
+int fun(int x) {
+    return x * x;
+}
+
+int main() {
+    printf("%d", fun(fun(2)));
+}
+```
+
+**Answer:** `16`
+
+---
+
+**Q5.** What is the output?
+
+
+```c
+#include <stdio.h>
+
+void fun() {
+    static int x = 1;
+    printf("%d ", x);
+    x++;
+}
+
+int main() {
+    fun();
+    fun();
+    fun();
+}
+```
+
+**Answer:** `1 2 3`
+
+---
+
+**Q6.** What is the output?
+
+
+```c
+#include <stdio.h>
+
+int fun(int n) {
+    if(n == 1)
+        return 1;
+    return n + fun(n - 1);
+}
+
+int main() {
+    printf("%d", fun(4));
+}
+```
+
+**Answer:** `10`
+
+---
+
+**Q7.** What is the output?
+
+```c
+#include <stdio.h>
+
+void fun(int x) {
+    printf("%d ", x);
+}
+
+int main() {
+    int a = 10;
+    fun(a);
+}
+```
+
+**Answer:** `10`
+
+---
+
+**Q8.** What is the output?
+
+```c
+#include <stdio.h>
+
+int fun(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    printf("%d", fun(5, 7));
+}
+```
+
+**Answer:** `12`
+
+---
+
+**Q9.** What is the output?
+
+```c
+#include <stdio.h>
+
+int fun(int n) {
+    if(n == 0)
+        return 0;
+    return 1 + fun(n / 2);
+}
+
+int main() {
+    printf("%d", fun(8));
+}
+```
+
+**Answer:** `4`
+
+---
+
+**Q10.** What is the output?
+
+```c
+#include <stdio.h>
+
+void fun(int a[]) {
+    a[0] = 100;
+}
+
+int main() {
+    int arr[] = {10,20,30};
+    fun(arr);
+    printf("%d", arr[0]);
+}
+```
+
+**Answer:** `100`
+
+---
+
+**Q11.** What is the output?
+
+```c
+#include <stdio.h>
+
+int fun() {
+    return 5;
+}
+
+int main() {
+    printf("%d", fun() + fun());
+}
+```
+
+**Answer:** `10`
+
+---
+
+**Q12.** What is the output?
+
+```c
+#include <stdio.h>
+
+int fun(int n) {
+    if(n <= 1)
+        return 1;
+    return n * fun(n - 1);
+}
+
+int main() {
+    printf("%d", fun(5));
+}
+```
+
+**Answer:** `120`
+
+---
+
+**Q13.** What is the output?
+
+```c
+#include <stdio.h>
+
+void fun(int x) {
+    printf("%d ", x);
+}
+
+int main() {
+    fun(3);
+    fun(4);
+}
+```
+
+**Answer:** `3 4`
+
+---
+
+**Q14.** What is the output?
+
+```c
+#include <stdio.h>
+
+int fun(int x) {
+    return ++x;
+}
+
+int main() {
+    int a = 5;
+    printf("%d", fun(a));
+}
+```
+
+**Answer:** `6`
+
+---
+
+**Q15.** What is the output?
+
+```c
+#include <stdio.h>
+
+int fun(int n) {
+    if(n == 0)
+        return 1;
+    return 2 * fun(n - 1);
+}
+
+int main() {
+    printf("%d", fun(3));
+}
+```
+
+**Answer:** `8`
+
+
+
+***** Recursion Questions 
+
+
+
+
+
+### Q1. What is recursion?
+
+**Answer:**
+Recursion is a programming technique in which a function calls itself directly or indirectly to solve a problem.
+
+---
+
+### Q2. What are the two essential parts of a recursive function?
+
+**Answer:**
+
+1. Base Case
+2. Recursive Cal
+---
+
+### Q3. What happens if a recursive function does not have a base condition?
+
+**Answer:**
+The function keeps calling itself indefinitely, leading to **stack overflow**.
+
+---
+
+### Q4. Differentiate between direct and indirect recursion.
+
+**Answer:**
+
+* **Direct Recursion:** A function calls itself directly.
+* **Indirect Recursion:** A function calls another function, which eventually calls the first function.
+
+---
+
+### Q5. What is the output of the following code?
+
+```c
+int fun(int n)
+{
+    if(n==0)
+        return 0;
+    return n + fun(n-1);
+}
+printf("%d", fun(4));
+```
+
+**Answer:**
+10
+
+**Explanation:**
+4 + 3 + 2 + 1 + 0 = 10
+
+---
+
+### Q6. What is the output?
+
+```c
+int fact(int n)
+{
+    if(n==1)
+        return 1;
+    return n * fact(n-1);
+}
+printf("%d", fact(5));
+```
+
+**Answer:**
+120
+
+---
+
+### Q7. How many times is the function called?
+
+```c
+void fun(int n)
+{
+    if(n>0)
+        fun(n-1);
+}
+fun(3);
+```
+
+**Answer:**
+4 times
+
+**Calls:**
+fun(3) → fun(2) → fun(1) → fun(0)
+
+---
+
+### Q8. What is tail recursion?
+
+**Answer:**
+A recursive function in which the recursive call is the last statement executed.
+
+Example:
+
+```c
+void fun(int n)
+{
+    if(n==0) return;
+    fun(n-1);
+}
+```
+
+---
+
+### Q9. What data structure is used to manage recursive function calls?
+
+**Answer:**
+**Stack (Function Call Stack)**
+
+---
+
+### Q10. What is the time complexity of the recursive factorial function?
+
+```c
+fact(n)=n*fact(n-1)
+```
+
+**Answer:**
+**O(n)**
+
+---
+
+### Q11. What is the output?
+
+```c
+void fun(int n)
+{
+    if(n>0)
+    {
+        printf("%d ", n);
+        fun(n-1);
+    }
+}
+fun(3);
+```
+
+**Answer:**
+
+```
+3 2 1
+```
+
+---
+
+### Q12. What is the output?
+
+```c
+void fun(int n)
+{
+    if(n>0)
+    {
+        fun(n-1);
+        printf("%d ", n);
+    }
+}
+fun(3);
+```
+
+**Answer:**
+
+```
+1 2 3
+```
+
+---
+
+### Q13. What is the output?
+
+```c
+int fun(int n)
+{
+    if(n==0)
+        return 1;
+    return 2*fun(n-1);
+}
+printf("%d", fun(3));
+```
+
+**Answer:**
+8
+
+**Explanation:**
+2 × 2 × 2 × 1 = 8
+
+---
+
+### Q14. What is stack overflow in recursion?
+
+**Answer:**
+Stack overflow occurs when too many recursive calls are made and the call stack exceeds its memory limit.
+
+---
+
+### Q15. Which is generally more memory-efficient: recursion or iteration?
+
+**Answer:**
+**Iteration**
+
+Because recursion requires additional stack space for each function call, whereas iteration does not.
