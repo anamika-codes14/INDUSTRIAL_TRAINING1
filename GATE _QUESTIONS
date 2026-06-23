@@ -1,0 +1,117 @@
+    15 QUESTIONS I GATE EXAMINATION :
+
+
+*****15 GATE-Level Questions on Functions (C Programming)
+
+
+
+
+1. Explain the difference between **call by value** and **call by reference**. Give an example where the choice affects the program output.
+
+2. A function contains a **static local variable** initialized to 0. The function is called five times. What values can be expected during each call? Explain.
+
+3. What is the purpose of a **function prototype** in C? What problems can arise if a prototype is omitted?
+
+4. Write a recursive function to compute the factorial of a number. Analyze its time and space complexity.
+
+5. What is **tail recursion**? How does it differ from non-tail recursion in terms of execution and optimization?
+
+6. Can a function return the address of a local variable? Justify your answer with reasons.
+
+7. Explain the scope and lifetime of:
+
+   * Local variables
+   * Global variables
+   * Static variables
+
+8. What happens if the base condition is missing in a recursive function? Explain with an example.
+
+9. Compare **recursion** and **iteration** with respect to memory usage, execution speed, and readability.
+
+10. A recursive function calls itself twice in each invocation until a base condition is reached. If the recursion depth is (n), determine the recurrence relation and analyze the time complexity.
+
+11. Explain how arguments are passed to functions in C. How can a function modify the value of a variable declared in the calling function?
+
+12. What is **mutual recursion**? Write an example involving two functions that call each other.
+
+13. Describe the function call stack. How are function parameters, local variables, and return addresses managed during execution?
+
+14. Consider a recursive function that computes the sum of the first (n) natural numbers. Trace the sequence of function calls for (n = 4).
+
+15. Explain the difference between **function declaration**, **function definition**, and **function call** with suitable examples.
+
+
+
+
+*****15 GATE-Level Questions on Function Calls (C Programming)
+
+
+
+
+1. What is the difference between a function declaration, function definition, and function call?
+
+2. Explain how control is transferred from the calling function to the called function and back.
+
+3. What happens in memory when a function call is executed?
+
+4. How are actual parameters and formal parameters related during a function call?
+
+5. Explain the concept of call by value in C with an example.
+
+6. Why does changing a formal parameter inside a function not affect the actual parameter in the calling function?
+
+7. How can a function modify a variable declared in the calling function?
+
+8. What is the role of the return statement in a function call?
+
+9. Can a function call be used as an argument to another function call? Explain with an example.
+
+10. What will happen if a function is called before its declaration or prototype is provided?
+
+11. Explain the sequence of function calls and returns for nested function calls.
+
+12. What information is stored in the function call stack during a function invocation?
+
+13. How does the stack grow and shrink during successive function calls and returns?
+
+14. What is recursion? How is a recursive function call different from a normal function call?
+
+15. Explain the effect of static local variables on repeated function calls.
+
+
+
+*****15 GATE-Level Questions on Recursion (C Programming)
+
+
+
+
+1. Define recursion. What are the essential components of a recursive function?
+
+2. Explain the role of the base case in recursion. What happens if it is omitted?
+
+3. Trace the sequence of recursive calls for a function that computes the factorial of 5.
+
+4. Differentiate between direct recursion and indirect recursion with examples.
+
+5. Explain tail recursion and discuss its advantages over non-tail recursion.
+
+6. Determine the number of times a recursive function is invoked when called with input (n).
+
+7. Analyze the time and space complexity of a recursive factorial function.
+
+8. Write the recurrence relation for a recursive function that computes the sum of the first (n) natural numbers.
+
+9. Explain how the function call stack is used during recursive execution.
+
+10. Compare recursion and iteration in terms of memory usage, readability, and efficiency.
+
+11. A recursive function makes two recursive calls in each invocation. Derive the recurrence relation and estimate its complexity.
+
+12. What is stack overflow? How can recursive programs lead to stack overflow?
+
+13. Trace the recursive calls and returns for a function that computes the Fibonacci sequence.
+
+14. Explain mutual recursion with a suitable example involving two functions.
+
+15. How can a recursive algorithm be converted into an iterative algorithm? Discuss the general approach.
+
