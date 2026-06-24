@@ -1,0 +1,412 @@
+Q1
+
+
+Determine the time complexity:
+
+
+for(int i=0;i<n;i++)
+{
+    cout<<i;
+} 
+
+n 
+Q2
+Determine the time complexity:
+
+
+for(int i=0;i<n;i++)
+{
+    for(int j=0;j<n;j++)
+    {
+        cout<<"*";
+    }
+}  
+
+n^2
+
+
+Q3
+
+
+Determine the time complexity:
+
+
+for(int i=0;i<n;i++)
+{
+    for(int j=0;j<i;j++)
+    {
+        cout<<"*";
+    }
+}
+
+
+n^2
+
+
+Q4
+
+
+Determine the time complexity:
+
+
+for(int i=1;i<n;i*=2)
+{
+    cout<<i;
+}
+
+
+logn
+
+
+Q5
+
+
+Determine the time complexity:
+
+
+for(int i=n;i>1;i/=2)
+{
+    cout<<i;
+}
+
+
+logn
+
+
+Q6
+
+
+Determine the time complexity:
+
+
+for(int i=1;i<=n;i++)
+{
+    for(int j=1;j<=log(n);j++)
+    {
+        cout<<"*";
+    }
+}
+
+
+nlogn
+
+
+Q7
+
+
+Determine the time complexity:
+
+
+while(n>0)
+{
+    n--;
+}
+
+
+
+
+n
+
+
+Q8
+
+
+Determine the time complexity:
+
+
+while(n>1)
+{
+    n/=2;
+}
+
+
+logn
+
+
+Q9
+
+
+Determine the time complexity:
+
+
+for(int i=1;i<=n;i++)
+{
+}
+for(int j=1;j<=n;j++)
+{
+}
+
+
+2n
+
+
+Q10
+
+
+Determine the time complexity:
+
+
+for(int i=1;i<=n;i++)
+{
+}
+for(int j=1;j<=n*n;j++)
+{
+}
+
+n^2
+
+
+Q11
+
+
+Determine the time complexity:
+
+
+for(int i=1;i<=n;i++)
+{
+    for(int j=1;j<=n*n;j++)
+    {
+    }
+}
+
+n^3
+
+
+Q12
+
+
+Determine the time complexity:
+
+
+for(int i=1;i<=n;i*=3)
+{
+}
+
+logn
+
+
+Q13
+
+
+Determine the time complexity:
+
+
+for(int i=1;i<=n;i++)
+{
+    for(int j=1;j<=i*i;j++)
+    {
+    }
+}
+
+n^3
+Q14
+
+
+Determine the time complexity:
+
+
+void fun(int n)
+{
+    if(n==0)
+        return;
+
+
+    fun(n-1);
+}
+
+
+
+n
+Q15
+
+
+Determine the time complexity:
+
+
+void fun(int n)
+{
+    if(n<=1)
+        return;
+
+
+    fun(n/2);
+}
+
+
+logn
+
+
+Q16
+
+
+Determine the time complexity:2^n
+
+
+void fun(int n)
+{
+    if(n==0)
+        return;
+
+
+    fun(n-1);
+    fun(n-1);
+}
+Q17
+
+
+Determine the time complexity:2^n
+
+
+int fib(int n)
+{
+    if(n<=1)
+        return n;
+
+
+    return fib(n-1)+fib(n-2);
+}
+Q18
+
+
+Determine the time complexity:n
+
+
+int fact(int n)
+{
+    if(n<=1)
+        return 1;
+
+
+    return n*fact(n-1);
+}
+Q19
+
+
+Determine the time complexity:n
+
+
+void fun(int n)
+{
+    if(n<=0)
+        return;
+
+
+    fun(n-1);
+
+
+    cout<<n;
+}
+Q20
+
+
+Determine the time complexity:logn
+
+
+void fun(int n)
+{
+    if(n<=1)
+        return;
+
+
+    fun(n/2);
+
+
+    cout<<n;
+}
+Q21
+
+
+Solve the recurrence relation:n
+
+
+T(n)=T(n-1)+1
+Q22
+
+
+Solve the recurrence relation:n^2
+
+
+T(n)=T(n-1)+n
+Q23
+
+
+Solve the recurrence relation:logn
+
+
+T(n)=T(n/2)+1
+Q24
+
+
+Solve the recurrence relation:2^n
+
+
+T(n)=2T(n-1)+1
+Q25
+
+
+Solve the recurrence relation:n
+
+
+T(n)=T(n/2)+n
+Bonus GATE-Level Questions
+Q26
+for(int i=1;i<=n;i++)
+{
+    for(int j=1;j<=i;j*=2)
+    {
+    }
+}
+
+
+Determine the complexity.nlogn
+
+
+Q27
+for(int i=1;i<=n;i*=2)
+{
+    for(int j=1;j<=n;j++)
+    {
+    }
+}
+
+
+Determine the complexity.n
+
+
+Q28
+for(int i=n;i>=1;i--)
+{
+    for(int j=i;j>=1;j--)
+    {
+    }
+}
+
+
+Determine the complexity.n^2
+
+
+Q29
+for(int i=1;i<=n;i++)
+{
+    for(int j=1;j<=n;j*=2)
+    {
+    }
+}
+
+
+Determine the complexity.nlogn
+
+
+Q30
+void fun(int n)
+{
+    if(n<=1)
+        return;
+
+
+    fun(n/2);
+    fun(n/2);
+}
+
+
+Determine the complexity.n
