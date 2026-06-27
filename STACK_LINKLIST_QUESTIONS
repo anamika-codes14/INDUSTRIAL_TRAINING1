@@ -1,0 +1,457 @@
+                                         GATE Previous-Year Questions 
+                                    ______________________________________
+
+
+
+******Stack, Queue, Linked :
+=============================
+
+1. GATE 2025 Q. Which data structure can support Push, Pop and Find-Min in O(1) time?
+
+Answer: Modified Stack (Stack with auxiliary stack)
+
+
+
+
+2. GATE 2024 Q. Which traversal technique uses a stack either explicitly or implicitly?
+
+Answer: Depth First Search (DFS)
+
+
+
+
+3. GATE 202 Q. A queue follows which principle?
+
+C) FIL
+D) None
+
+Answer: FIFO
+
+
+
+
+
+
+4. GATE 2022 Q. Which operation removes an element from a stack?
+
+Answer: Pop
+
+
+
+
+5. GATE 2021 Q. Which of the following is a non-linear data structure?
+
+A) Stack
+B) Queue
+C) Linked List
+D) Tree
+
+Answer: Tree
+
+
+
+
+6. GATE 2020 Q. Which data structure is used in Breadth First Search?
+
+Answer: Queue
+
+
+
+
+7. GATE 2019 Q. Recursion is implemented using which data structure?
+
+Answer: Stack
+
+
+
+
+8. GATE 2018
+
+Q. Time complexity of insertion at the beginning of a linked list?
+
+Answer: O(1)
+
+
+---
+
+9. GATE 2017
+
+Q. Circular Queue is mainly used to overcome which problem?
+
+Answer: Wastage of memory
+
+
+
+
+10. GATE 2016
+
+Q. Search operation in an unsorted linked list takes?
+
+Answer: O(n)
+
+
+
+
+11. GATE 2015
+
+Q. Postfix expression evaluation uses which data structure?
+
+Answer: Stack
+
+
+
+
+12. GATE 2014
+
+Q. Which of the following is an application of Stack?
+
+Function Calls
+
+Recursion
+
+Expression Evaluation
+
+
+Answer: All of the above
+
+
+
+
+13. GATE 2013
+
+Q. Which operation is performed at the rear end of a queue?
+
+Answer: Enqueue
+
+
+
+
+14. GATE 2012
+
+Q. Queue follows which order?
+
+Answer: FIFO
+
+
+
+
+15. GATE 2011
+
+Q. Which function allocates memory and initializes it to zero?
+
+Answer: calloc()
+
+
+
+
+16. GATE 2010
+
+Q. Which memory area is used by malloc()?
+
+Answer: Heap
+
+
+
+
+17. GATE 2009
+
+Q. Which function is used to release dynamically allocated memory?
+
+Answer: free()
+
+
+
+
+18. GATE 2008
+
+Q. Which data structure is best for implementing recursion?
+
+Answer: Stack
+
+
+
+
+19. GATE 2007
+
+Q. Which linked list allows traversal in both directions?
+
+Answer: Doubly Linked List
+
+
+---
+
+20. GATE 2006
+
+Q. Worst-case time complexity for searching in a linked list?
+
+Answer: O(n)
+
+
+---
+
+21. GATE 2005
+
+Q. What does Push operation do?
+
+Answer: Inserts an element into the stack.
+
+
+---
+
+22. GATE 2004
+
+Q. What does Pop operation do?
+
+Answer: Removes the top element from the stack.
+
+
+---
+
+23. GATE 2003
+
+Q. What is Queue Underflow?
+
+Answer: Deletion from an empty queue.
+
+
+---
+
+24. GATE 2002
+
+Q. What is Stack Overflow?
+
+Answer: Insertion into a full stack.
+
+
+---
+
+25. GATE 2001
+
+Q. Which pointer stores the address of the next node in a singly linked list?
+
+Answer: Link Pointer
+
+
+---
+
+26. GATE 2000
+
+Q. What is the main advantage of a linked list over an array?
+
+Answer: Dynamic Size
+
+
+---
+
+27.
+
+Q. Which DMA function changes the size of allocated memory?
+
+Answer: realloc()
+
+
+---
+
+28.
+
+Q. What does malloc() return if memory allocation fails?
+
+Answer: NULL
+
+
+---
+
+29.
+
+Q. Which header file contains malloc(), calloc(), realloc() and free()?
+
+Answer: stdlib.h
+
+
+---
+
+30.
+
+Q. Memory not released after allocation causes?
+
+Answer: Memory Leak
+
+
+---
+
+31.
+
+Q. Time complexity of Push operation?
+
+Answer: O(1)
+
+
+---
+
+32.
+
+Q. Time complexity of Pop operation?
+
+Answer: O(1)
+
+
+---
+
+33.
+
+Q. Time complexity of Enqueue operation?
+
+Answer: O(1)
+
+
+---
+
+34.
+
+Q. Time complexity of Dequeue operation?
+
+Answer: O(1)
+
+
+---
+
+35.
+
+Q. Last inserted element is removed first in which structure?
+
+Answer: Stack
+
+
+---
+
+36.
+
+Q. First inserted element is removed first in which structure?
+
+Answer: Queue
+
+
+---
+
+37.
+
+Q. Which linked list has the last node connected to the first node?
+
+Answer: Circular Linked List
+
+
+---
+
+38.
+
+Q. Which operator is used for dynamic memory allocation in C++?
+
+Answer: new
+
+
+---
+
+39.
+
+Q. Which operator is used for memory deallocation in C++?
+
+Answer: delete
+
+
+---
+
+40.
+
+Q. Linked list nodes are generally stored in which memory region?
+
+Answer: Heap Memory
+
+
+---
+
+41.
+
+Q. Which data structure is used in Undo operation of editors?
+
+Answer: Stack
+
+
+---
+
+42.
+
+Q. Which data structure is used in Printer Scheduling?
+
+Answer: Queue
+
+
+---
+
+43.
+
+Q. Which queue is used in Round Robin Scheduling?
+
+Answer: Circular Queue
+
+
+---
+
+44.
+
+Q. What are the two fields of a node?
+
+Answer: Data and Pointer
+
+
+---
+
+45.
+
+Q. Which linked list requires extra memory for previous pointers?
+
+Answer: Doubly Linked List
+
+
+---
+
+46.
+
+Q. Insertion at the beginning of a linked list takes?
+
+Answer: O(1)
+
+
+---
+
+47.
+
+Q. Deletion at the beginning of a linked list takes?
+
+Answer: O(1)
+
+
+---
+
+48.
+
+Q. What is the full form of FIFO?
+
+Answer: First In First Out
+
+
+---
+
+49.
+
+Q. What is the full form of LIFO?
+
+Answer: Last In First Out
+
+
+---
+
+50.
+
+Q. Which data structure is most commonly used for function call management?
+
+Answer: Stack
