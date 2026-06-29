@@ -1,0 +1,175 @@
+                                            SEMORDNILAP:
+                                        ====================
+                                        
+-------->>>>>  A word that spells a DIFFERENT valid word when reversed
+____________________________________________________________________________________
+
+
+#include <stdio.h>
+
+#include <string.h>
+
+#include <ctype.h>
+
+// Reverse a string into 'result'
+
+void reverseString(char *str, char *result) 
+{
+    int len = strlen(str);
+    
+    for (int i = 0; i < len; i++)
+    
+        result[i] = str[len - 1 - i];
+        
+    result[len] = '\0';
+    
+}
+
+// Check if it's a palindrome (same word reversed — NOT a semordnilap)
+
+int isPalindrome(char *str) 
+{
+    char rev[100];
+    
+    reverseString(str, rev);
+    
+    return strcasecmp(str, rev) == 0;
+    
+}
+
+// Built-in word list for validation (extend as needed)
+
+const char *dictionary[] = 
+{
+    "dog", "god", "evil", "live", "stressed", "desserts",
+    
+    "now", "won", "raw", "war", "net", "ten", "bat", "tab",
+    
+    "tap", "pat", "tip", "pit", "nap", "pan", "map", "pam",
+    
+    "rat", "tar", "pot", "top", "gum", "mug", "bus", "sub",
+    
+    "drawer", "reward", "smart", "trams", "spots", "stops",
+    
+    "sleep", "peels", "stab", "bats", "repaid", "diaper",
+    
+    "edit", "tide", "edam", "made", "dips", "spid", "lager", "regal",
+    
+    NULL
+};
+
+int inDictionary(char *word) 
+{
+    char lower[100];
+    
+    for (int i = 0; word[i]; i++) lower[i] = tolower(word[i]);
+    
+    lower[strlen(word)] = '\0';
+    
+
+    for (int i = 0; dictionary[i]; i++)
+    
+        if (strcmp(lower, dictionary[i]) == 0) return 1;
+        
+    return 0;
+}
+
+int isSemordnilap(char *str, char *reversed) 
+{
+    reverseString(str, reversed);
+    
+    // Must not be a palindrome and reversed must be a different valid word
+    
+    if (isPalindrome(str)) return 0;
+    
+    if (strcasecmp(str, reversed) == 0) return 0;
+    
+    return inDictionary(reversed);
+    
+}
+
+int main()
+{
+    char str[100];
+    
+    char reversed[100];
+    
+
+    printf("Enter a word: ");
+    
+    fgets(str, sizeof(str), stdin);
+    
+    str[strcspn(str, "\n")] = '\0';
+    
+
+    // Convert to lowercase for processing
+    
+    for (int i = 0; str[i]; i++) str[i] = tolower(str[i]);
+    
+
+    if (isSemordnilap(str, reversed))
+    
+        printf("\"%s\" IS a semordnilap! Reversed: \"%s\"\n", str, reversed);
+        
+    else {
+        reverseString(str, reversed);
+        
+        if (isPalindrome(str))
+        
+            printf("\"%s\" is a PALINDROME (same word reversed), not a semordnilap.\n", str);
+            
+        else
+            printf("\"%s\" is NOT a semordnilap. (Reversed: \"%s\" — not a known word)\n",
+            
+                   str, reversed);
+    }
+
+    printf("\n--- Known Semordnilap Pairs ---\n");
+    
+    printf("  dog <-> god\n");
+    
+    printf("  evil <-> live\n");
+    
+    printf("  stressed <-> desserts\n");
+    
+    printf("  drawer <-> reward\n");
+    
+    printf("  smart <-> trams\n");
+    
+    printf("  sleep <-> peels\n");
+    
+    printf("-------------------------------\n");
+    
+
+    return 0;
+}
+
+
+output:
+
+Enter a word : evil
+
+"evil" Is a semordnilap Reversed:live
+
+----Known Semordnilap Pairs-----
+
+dog <-> god
+
+evil <-> live
+
+stressed <-> desserts
+
+drawer <-> reward
+
+smart <-> trams
+
+sleep <-> peels
+
+--------------------------------------------------------------
+
+
+
+
+
+
+
