@@ -1,0 +1,265 @@
+
+  DATE-29th June,2026 
+                                                 D A T A  - S T R U C T U R E S 
+                                        ==============================================
+
+                                                       PRACTICE QUESTIONS
+                                            _______________________________________
+
+                                                       
+Q1. What is a Data Structure? Give 3 real-life examples.
+
+
+ANS: A Data Structure is a way of organizing, storing, and managing data in a computer so it can be accessed and modified efficiently.
+
+---->> 3 Real-life Examples:
+
+
+                         1. Phone Book → Array/List (names stored in order)
+                         
+                         2. Undo feature in editors → Stack (last action undone first)
+                         
+                         3. Queue at a ticket counter → Queue (first come, first served)
+
+
+
+
+
+                         
+Q2. Differentiate between Linear and Non-linear Data Structures
+
+
+
+  Feature                   LinearN                             Non-linear
+  
+1.Arrangement               Sequential                          Hierarchical
+
+2.Traversal                 Single level                        Multiple levels
+
+3.Memory                    Less efficient                       More efficient
+
+4.Examples                  Array, Stack,                         Tree, Graph
+
+
+
+
+
+
+Q3. Explain the internal structure of an Array with a memory diagram.
+
+ANS: An array stores elements in contiguous memory locations.
+
+--->Code
+
+Index:   [0]   [1]   [2]   [3]   [4]
+Value:    10    20    30    40    50
+Address: 100   104   108   112   116
+
+
+1. Each element occupies equal memory (e.g., 4 bytes for int)
+                              
+2.Base address + (index × size) = element address
+
+
+
+
+
+
+
+Q4. Write the algorithm and C program for Array Insertion
+
+ANS:---> Algorithm:
+
+1. Start
+
+2. Accept position pos and value val
+
+3. Shift elements right from end to pos
+
+4. Insert val at pos
+
+5. Increment size
+
+6. End
+
+
+--->C Program:
+
+#include <stdio.h>
+
+void insert(int arr[], int *n, int pos, int val) {
+
+    for (int i = *n; i >= pos; i--)
+    
+        arr[i] = arr[i - 1];
+        
+    arr[pos - 1] = val;
+    
+    (*n)++;
+}
+int main() 
+{
+    int arr[10] = {1, 2, 3, 4}, n = 4;
+    
+    insert(arr, &n, 2, 99);
+    
+    for (int i = 0; i < n; i++)
+    
+        printf("%d ", arr[i]); // Output: 1 99 2 3 4
+}
+
+
+
+
+
+
+
+Q5. Explain Stack using LIFO concept with a diagram
+
+ANS: A Stack follows LIFO – Last In, First Out.
+
+-->Code
+
+| |
+     | 30|  ← TOP (last inserted, first removed)
+     | 20|
+     | 10|
+     |___|
+
+
+
+
+1. Push → Add to top
+
+2. Pop → Remove from top
+
+3. Example: Browser back button, function call stack
+
+
+
+
+
+
+
+Q6. What is the difference between Stack and Queue?
+
+
+____________________________________________________________________________________
+    Feature                    Stack                              Queue
+____________________________________________________________________________________
+1. Principle                   LIFO                               FIF0
+
+2. Insertion                   Push (top)                       Enqueue (rear) 
+
+3. Deletion                    Pop (top)                        Dequeue (front)
+
+4. ExampleUndo                 operation                        Printer queue
+
+
+
+
+
+
+
+Q7. Write C code for Enqueue and Dequeue operations
+
+
+
+ANS: #include <stdio.h>
+
+#define MAX 5
+
+int queue[MAX], front = -1, rear = -1;
+
+void enqueue(int val) 
+{
+    if (rear == MAX - 1)
+    
+        printf("Queue Full\n");
+        
+    else {
+        if (front == -1) front = 0;
+        
+        queue[++rear] = val;
+        
+        printf("Enqueued: %d\n", val);
+    }
+}
+
+void dequeue()
+{
+    if (front == -1 || front > rear)
+    
+        printf("Queue Empty\n");
+        
+    else
+        printf("Dequeued: %d\n", queue[front++]);
+}
+
+int main() 
+{
+    enqueue(10);
+    
+    enqueue(20);
+    
+    enqueue(30);
+    
+    dequeue();
+    
+    dequeue();
+    
+    return 0;
+}
+
+
+
+
+
+
+Q8. Explain Singly Linked List with a node diagram
+
+
+ANS: A Singly Linked List is a chain of nodes where each node points to the next.
+
+        
+    
+Node Structure:
+
+--->Code
+
+[ Data | Next ] → [ Data | Next ] → [ Data | NULL ]
+   10               20                  30
+
+
+
+C Structure:
+
+---->code:
+
+               struct Node {
+               
+                int data;
+                struct Node* ;
+
+               };
+               
+
+1. HEAD points to the first node
+
+
+2. Last node's next = NULL
+
+
+3. Dynamic in size, no contiguous memory needed
+
+
+
+
+
+
+
+
+
+
+
+
